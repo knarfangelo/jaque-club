@@ -24,6 +24,13 @@ body {
   margin: 0;
 }
 
+@font-face {
+  font-family: 'MirrenBcb-Regular';
+  src: url('../public/fonts/MirrenBcb-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 /**
  * Render the `main` element consistently in IE.
  */

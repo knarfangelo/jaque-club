@@ -1,0 +1,8 @@
+<div class="contenedor-logo">
+  <img *ngFor="let svg of svgList; let i = index"
+       [hidden]="i !== currentIndex"
+       [src]="svg"
+       alt="Logo dinámico"
+       width="440"
+       height="440">
+</div>
