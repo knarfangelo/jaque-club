@@ -1,0 +1,71 @@
+<app-navbar></app-navbar>
+<section class="reclamation-form">
+  <h2>Libro de Reclamaciones</h2>
+  <p>
+    Conforme a lo establecido en el Código de Protección y Defensa del Consumidor, este establecimiento cuenta con un Libro de Reclamaciones a tu disposición.
+  </p>
+
+  <form action="mailto:jaquesclub@gmail.com" method="post" enctype="text/plain">
+    <fieldset>
+      <legend>1. Datos del consumidor reclamante</legend>
+
+      <label>Nombres y Apellidos:</label>
+      <input type="text" name="nombre" required>
+
+      <label>Documento de Identidad (DNI / CE):</label>
+      <input type="text" name="dni" required>
+
+      <label>Correo Electrónico:</label>
+      <input type="email" name="correo" required>
+
+      <label>Teléfono:</label>
+      <input type="tel" name="telefono">
+
+      <label>Dirección:</label>
+      <input type="text" name="direccion">
+    </fieldset>
+
+    <fieldset>
+      <legend>2. Identificación del bien contratado</legend>
+
+      <label>Tipo de bien:</label>
+      <select name="tipo_bien">
+        <option value="producto">Producto</option>
+        <option value="servicio">Servicio</option>
+      </select>
+
+      <label>Descripción del producto o servicio:</label>
+      <textarea name="descripcion_bien" rows="3" required></textarea>
+    </fieldset>
+
+    <fieldset>
+      <legend>3. Detalle de la reclamación</legend>
+
+      <label>Tipo:</label>
+      <select name="tipo_reclamo">
+        <option value="queja">Queja</option>
+        <option value="reclamo">Reclamo</option>
+      </select>
+
+      <label>Detalle del reclamo o queja:</label>
+      <textarea name="detalle" rows="4" required></textarea>
+
+      <label>Pedido del consumidor:</label>
+      <textarea name="pedido" rows="3" required></textarea>
+    </fieldset>
+
+    <fieldset>
+      <legend>4. Confirmación</legend>
+      <p>
+        Declaro ser el titular del bien contratado y manifiesto que la información consignada es veraz.
+      </p>
+      <label>
+        <input type="checkbox" name="acepto" required>
+        Acepto los términos y condiciones.
+      </label>
+    </fieldset>
+
+    <button type="submit">Enviar Reclamo</button>
+  </form>
+</section>
+<app-footer></app-footer>

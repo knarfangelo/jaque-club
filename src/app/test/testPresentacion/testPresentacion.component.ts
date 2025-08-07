@@ -66,7 +66,6 @@ export class TestPresentacionComponent implements OnInit, AfterViewInit, OnDestr
         trigger: cambio.trigger,
         start: 'top center',
         end: 'bottom center',
-        markers: true,
         onEnter: () => this.animarTexto(titulo, cambio.texto, cambio.pomo,cambio.linea,cambio.lineaslogo),
         onEnterBack: () => this.animarTexto(titulo, cambio.texto,cambio.pomo,cambio.linea,cambio.lineaslogo),
       });
@@ -77,7 +76,6 @@ export class TestPresentacionComponent implements OnInit, AfterViewInit, OnDestr
       trigger: '#step1',
       start: 'top center',
       end: 'bottom center',
-      markers: true,
       onEnter: () => this.mostrarPomos(presentacion, pomos),
       onLeaveBack: () => this.mostrarPresentacion(presentacion, pomos),
     });

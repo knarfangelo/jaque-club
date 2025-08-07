@@ -1,0 +1,54 @@
+.return-policy {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'Segoe UI', sans-serif;
+  color: #222;
+  line-height: 1.6;
+}
+
+.return-policy h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.return-policy p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.return-policy ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.return-policy li {
+  margin-bottom: 0.5rem;
+}
+
+.return-policy strong {
+  font-weight: 600;
+  color: #000;
+}
+
+.return-policy a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.return-policy a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .return-policy {
+    padding: 1rem;
+  }
+
+  .return-policy h2 {
+    font-size: 1.5rem;
+  }
+}

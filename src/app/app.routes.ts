@@ -1,6 +1,11 @@
 import { Routes } from '@angular/router';
 import { HomeComponent } from './pages/Home/Home.component';
 import { TestPresentacionComponent } from './test/testPresentacion/testPresentacion.component';
+import { ContactoComponent } from './pages/contacto/contacto.component';
+import { PoliticaEnviosComponent } from './pages/politicaEnvios/politicaEnvios.component';
+import { PoliticaDevolucionComponent } from './pages/politica-devolucion/politica-devolucion.component';
+import { TerminosCondicionesComponent } from './pages/TerminosCondiciones/TerminosCondiciones.component';
+import { LibroReclamacionesComponent } from './pages/libroReclamaciones/libroReclamaciones.component';
 
 export const routes: Routes = [
 
@@ -11,6 +16,26 @@ export const routes: Routes = [
     {
         path:'testPresentacion',
         component:TestPresentacionComponent
+    },
+    {
+        path:'contacto',
+        component:ContactoComponent
+    },
+    {
+        path:'politica-envios',
+        component:PoliticaEnviosComponent
+    },
+    {
+        path:'politica-devolucion',
+        component:PoliticaDevolucionComponent
+    },
+    {
+        path:'terminos-condiciones',
+        component:TerminosCondicionesComponent
+    },
+    {
+        path:'libro-reclamaciones',
+        component:LibroReclamacionesComponent
     }
 
 ];

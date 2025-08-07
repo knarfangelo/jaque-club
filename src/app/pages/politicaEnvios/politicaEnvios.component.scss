@@ -1,0 +1,46 @@
+.shipping-policy {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'Segoe UI', sans-serif;
+  color: #222;
+  line-height: 1.6;
+}
+
+.shipping-policy h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.shipping-policy h3 {
+  font-size: 1.3rem;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  color: #000;
+}
+
+.shipping-policy p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.shipping-policy strong {
+  font-weight: 600;
+  color: #000;
+}
+
+@media (max-width: 600px) {
+  .shipping-policy {
+    padding: 1rem;
+  }
+
+  .shipping-policy h2 {
+    font-size: 1.5rem;
+  }
+
+  .shipping-policy h3 {
+    font-size: 1.1rem;
+  }
+}

@@ -5,13 +5,17 @@ nav {
   z-index: 100;
   width: 100%;
   font-family: "Mulish", sans-serif;
+  background-image: url('/backgroundhome.webp');
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
 
   img {
     width: auto;
     height: 95px;
   }
 
-  button,.circle {
+  button,.circle,a {
     background-color: transparent;
     margin-top: 25px;
     height: 40px;
@@ -19,6 +23,9 @@ nav {
     color: #fff;
     border: none;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
 
     &:nth-child(6) {
       margin-left: auto;
