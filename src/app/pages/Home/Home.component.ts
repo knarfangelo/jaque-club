@@ -2,10 +2,12 @@ import { ChangeDetectionStrategy, Component, ElementRef, QueryList, ViewChild, V
 import { NavbarComponent } from "../../layouts/navbar/navbar.component";
 import { PresentacionComponent } from "../../layouts/HomePage/presentacion/presentacion.component";
 import { CommonModule } from '@angular/common';
+import { TestPresentacionComponent } from "../../test/testPresentacion/testPresentacion.component";
+import { FooterComponent } from "../../layouts/footer/footer.component";
 
 @Component({
   selector: 'app-home',
-  imports: [NavbarComponent, PresentacionComponent,CommonModule],
+  imports: [NavbarComponent, PresentacionComponent, CommonModule, TestPresentacionComponent, FooterComponent],
   templateUrl: './Home.component.html',
   styleUrl: './Home.component.scss',
 })

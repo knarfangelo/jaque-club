@@ -24,10 +24,40 @@ body {
   margin: 0;
 }
 
+
+
 @font-face {
   font-family: 'MirrenBcb-Regular';
   src: url('../public/fonts/MirrenBcb-Regular.ttf') format('truetype');
   font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TwentiethCentury';
+  src: url('/fonts/TwentiethCenturyforKenmoreLight.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TwentiethCentury';
+  src: url('/fonts/TwentiethCenturyforKenmoreMedium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TwentiethCentury';
+  src: url('/fonts/TwentiethCenturyforKenmoreSemibold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TwentiethCentury';
+  src: url('/fonts/TwentiethCenturyforKenmoreBold.ttf') format('truetype');
+  font-weight: 700;
   font-style: normal;
 }
 

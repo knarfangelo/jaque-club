@@ -4,11 +4,13 @@ background-color: #fff;
   border-radius: 50%;
   align-items: center;
   justify-content: center;
-  width: 450px;
-  height: 450px;
+  width: 35vw;
+  height: 35vw;
+  overflow: hidden;
 
   img {
-    scale: 1.3;
+    width: 43vw;
+    height: 43vw;
     object-fit: contain;
   }
 }

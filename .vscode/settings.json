@@ -4,5 +4,12 @@
             "externalTemplate": true,
             "style": "scss"
         }
-    }
+    },
+    "python-envs.pythonProjects": [
+        {
+            "path": "src/app/test",
+            "envManager": "ms-python.python:venv",
+            "packageManager": "ms-python.python:pip"
+        }
+    ]
 }

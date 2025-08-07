@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_4" data-name="Capa 4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 810 810">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke-dasharray: 4.87 3.65;
+      }
+
+      .cls-1, .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-3 {
+        font-family: Inter-Medium, Inter;
+        font-size: 13.66px;
+        font-variation-settings: 'wght' 500, 'slnt' 0;
+        font-weight: 500;
+      }
+
+      .cls-2 {
+        stroke-width: 3px;
+      }
+    </style>
+  </defs>
+  <circle cx="286.25" cy="453.65" r="7.02"/>
+  <circle cx="341.7" cy="509.22" r="7.02"/>
+  <circle cx="528.58" cy="340.79" r="7.02"/>
+  <polyline class="cls-2" points="528.58 340.79 341.7 513.01 286.25 453.45"/>
+  <text class="cls-3" transform="translate(514.27 324.53)"><tspan x="0" y="0">END</tspan></text>
+  <text class="cls-3" transform="translate(263.74 437.18)"><tspan x="0" y="0">START</tspan></text>
+  <line class="cls-1" x1="200.98" y1="454.52" x2="613.14" y2="454.52"/>
+</svg>
