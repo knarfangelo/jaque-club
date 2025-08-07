@@ -56,7 +56,7 @@ export class TestPresentacionComponent implements OnInit, AfterViewInit, OnDestr
     // Cambiar texto según scroll
     const cambios = [
       { trigger: '#step1', texto: 'LOYALTY',pomo:'pomos/pomo2.webp', linea:'lineas/linea4.svg',lineaslogo:'lineaslogo/lineaslogo2.png' },
-      { trigger: '#step2', texto: 'SUCCES',pomo:'pomos/pomo3.webp', linea:'lineas/linea2.svg',lineaslogo:'lineaslogo/lineaslogo3.png' },
+      { trigger: '#step2', texto: 'SUCCESS',pomo:'pomos/pomo3.webp', linea:'lineas/linea2.svg',lineaslogo:'lineaslogo/lineaslogo3.png' },
       { trigger: '#step3', texto: 'DECISION',pomo:'pomos/pomo1.webp', linea:'lineas/linea3.svg',lineaslogo:'lineaslogo/lineaslogo4.png' },
       { trigger: '#step4', texto: 'LOVE',pomo:'pomos/pomo4.webp', linea:'lineas/linea1.svg',lineaslogo:'lineaslogo/lineaslogo1.png' },
     ];

@@ -1,0 +1,39 @@
+<app-navbar></app-navbar>
+
+<section class="detalle-container" *ngIf="producto">
+  <div class="detalle-grid">
+    <div class="detalle-izquierda">
+      <div class="logo">
+        <img src="lineaslogo/lineaslogo1.png" alt="Logo" />
+      </div>
+      <img [src]="producto.imagen" alt="{{ producto.nombre }}" class="detalle-imagen" />
+      <img src="bombilla.png" alt="Bombilla" class="bombilla-detalle" />
+    </div>
+
+    <div class="detalle-derecha">
+      <h4>Jaque's Club</h4>
+      <h2>{{ producto.nombre }} (Color {{ producto.color }})</h2>
+      <p class="precio">
+        <span class="original">s/ {{ producto.precioOriginal }}</span>
+        <span class="oferta">{{ producto.precioOferta }}</span>
+      </p>
+      <p class="descripcion">{{ producto.descripcion }}</p>
+
+      <h3>Características</h3>
+      <ul>
+        <li *ngFor="let c of producto.caracteristicas">{{ c }}</li>
+      </ul>
+<div class="acciones">
+  <div class="cantidad">
+    <button (click)="decrementarCantidad()">-</button>
+    <span>{{ cantidad }}</span>
+    <button (click)="incrementarCantidad()">+</button>
+  </div>
+  <button class="pago" (click)="pagar()">💳 PAGAR ONLINE CON TARJETA</button>
+</div>
+
+    </div>
+  </div>
+</section>
+
+<app-footer></app-footer>

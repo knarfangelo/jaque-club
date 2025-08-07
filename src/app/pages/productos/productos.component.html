@@ -1,0 +1,27 @@
+<app-navbar></app-navbar>
+<section class="productos-container">
+  <div class="productos-grid">
+<a class="producto" *ngFor="let item of productos" [routerLink]="['/producto', item.id]">
+      <img [src]="item.imagen" alt="{{ item.nombre }}" class="producto-imagen" />
+      <div class="producto-info">
+        <h4 class="marca">Jaque's Club</h4>
+        <p class="nombre">{{ item.nombre }}</p>
+        <div class="precio">
+          <span class="precio-original">S/ {{ item.precioOriginal }}</span>
+          <span class="precio-descuento">S/ {{ item.precioOferta }}</span>
+        </div>
+      </div>
+      <img src="bombilla.png" alt="Bombilla" class="bombilla-icon" />
+    </a>
+  </div>
+
+  <div class="descripcion">
+    <p>
+      <strong>Si disfrutas del deporte al aire libre</strong>, de un día en la playa, una caminata en la montaña o simplemente de una buena sesión de mate con amigos, este termo (también utilizado como tomatodo) 3 en 1 es tu compañero perfecto.
+    </p>
+    <p>
+      <strong>Calidad superior a un precio accesible:</strong> No pagues el doble por productos similares. Disfruta de la practicidad, el estilo y la funcionalidad que solo JAQUE puede ofrecerte.
+    </p>
+  </div>
+</section>
+<app-footer></app-footer>

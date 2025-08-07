@@ -6,6 +6,8 @@ import { PoliticaEnviosComponent } from './pages/politicaEnvios/politicaEnvios.c
 import { PoliticaDevolucionComponent } from './pages/politica-devolucion/politica-devolucion.component';
 import { TerminosCondicionesComponent } from './pages/TerminosCondiciones/TerminosCondiciones.component';
 import { LibroReclamacionesComponent } from './pages/libroReclamaciones/libroReclamaciones.component';
+import { ProductosComponent } from './pages/productos/productos.component';
+import { ProductoDetalleComponent } from './pages/ProductoDetalle/ProductoDetalle.component';
 
 export const routes: Routes = [
 
@@ -36,6 +38,12 @@ export const routes: Routes = [
     {
         path:'libro-reclamaciones',
         component:LibroReclamacionesComponent
-    }
+    },
+    {
+        path: 'productos',
+        component: ProductosComponent
+    },
+    { path: 'producto/:id', component: ProductoDetalleComponent }
+
 
 ];
