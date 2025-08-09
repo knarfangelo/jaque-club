@@ -27,7 +27,6 @@
               {
                 "glob": "**/*",
                 "input": "public"
-                
               },
               "src/_redirects"
             ],
