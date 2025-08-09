@@ -15,7 +15,8 @@ export class HomeComponent {
   images: string[] = [
     '/pomos/pomo1.webp',
     '/pomos/pomo2.webp',
-    '/pomos/pomo3.webp'
+    '/pomos/pomo3.webp',
+    '/pomos/pomo4.webp'
   ];
 
   index = 0;

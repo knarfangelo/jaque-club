@@ -27,14 +27,13 @@ nav {
     align-items: center;
     text-decoration: none;
 
-    &:nth-child(6) {
+  }
+      .comprar {
       margin-left: auto;
       border: 1px solid #fff;
       margin-right: 50px;
       padding: 0 20px;
     }
-
-  }
 
   .logo {
     width: 60px;
@@ -55,10 +54,55 @@ nav {
 
 }
 .bloque {
+  display: none;
+  img {
+    width: 50px;
+    height: 50px;
+  }
+}
+.relleno {
   display: flex;
   width: 100%;
   height: 90px;
-    background-image: url('/backgroundhome.webp');
+  background: transparent;
+}
+
+
+@media (width < 800px) {
+  nav {
+    width: 75%;
+    height: 100vh;
+    transform: translateX(-100%);
+    display: flex;
+    flex-direction: column;
+    
+    box-sizing: border-box;
+    padding: 20px;
+    transition: transform 0.3s ease-in-out;
+
+    &.open {
+      transform: translateX(0);
+    }
+    a{
+      margin: 0;
+    }
+    .circle {
+      display: none;
+    }
+    .comprar {
+      margin: 0 ;
+    }
+  }
+
+
+  .bloque {
+  display: flex;
+  width: 100%;
+  height: 90px;
+  top: 0;
+  position: fixed;
+  z-index: 50;
+  background-image: url('/backgroundhome.webp');
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
@@ -71,6 +115,7 @@ nav {
     background-color: transparent;
     border: 0;
     display: flex;
+    cursor: pointer;
     
     img {
       height: 80px;
@@ -92,13 +137,5 @@ nav {
 
 }
 
-@media (width < 800px) {
-  nav {
-    transform: translateX(-100%);
-  }
-
-  .bloque {
-    display: none;
-  }
   
 }

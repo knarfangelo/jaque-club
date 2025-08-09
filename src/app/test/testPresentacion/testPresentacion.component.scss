@@ -137,6 +137,16 @@
   }
 
 }
+
+.videos {
+  display: flex;
+  object-fit: cover;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  filter: blur(5px);
+}
   .video {
     width: 100%;
     height: 100vh;
@@ -156,5 +166,84 @@
 
   .lineaslogo {
     opacity: 1;
+  }
+}
+
+
+/* 📱 Responsive para pantallas pequeñas */
+@media (max-width: 800px) {
+
+  .contenido {
+    .pomos-jaque {
+
+    .text_road {
+      width: fit-content;
+      height: fit-content;
+      position: absolute;
+      right: 0;
+      left: 10vw;
+      font-size: 16vw;
+    }
+    .text_to {
+      width: fit-content;
+      height: fit-content;
+      position: absolute;
+      font-size: 16vw;
+      left: 60vw;
+      bottom: 0vw;
+      top: 0vw;
+    }
+    .text_relativo {
+      width: 100%;
+      height: fit-content;
+      position: absolute;
+      font-size: 16vw;
+      left:0vw;
+      right: 0vw;
+      bottom: 0;
+      text-align: center;
+    }
+
+      .imagen {
+        width: 60vw;
+        height: 60vw;
+      }
+    }
+  }
+
+  .contenido {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  align-items: center;
+  font-size: 5vw;
+  font-weight: 100;
+  z-index: 100;
+
+  .presentacion {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 100%;
+    height: 50vh;
+    position: relative;
+    app-logo-jaque {
+      position: static;
+      scale: 2;
+    }
+    .text1{
+      position: static;
+      font-size: 16vw;
+    }
+    .text2{
+      position: static;
+      font-size: 16vw;
+    }
+  }
   }
 }
