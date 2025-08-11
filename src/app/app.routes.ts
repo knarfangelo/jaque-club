@@ -8,6 +8,7 @@ import { TerminosCondicionesComponent } from './pages/TerminosCondiciones/Termin
 import { LibroReclamacionesComponent } from './pages/libroReclamaciones/libroReclamaciones.component';
 import { ProductosComponent } from './pages/productos/productos.component';
 import { ProductoDetalleComponent } from './pages/ProductoDetalle/ProductoDetalle.component';
+import { CatalogoComponent } from './pages/Catalogo/Catalogo.component';
 
 export const routes: Routes = [
 
@@ -43,7 +44,9 @@ export const routes: Routes = [
         path: 'productos',
         component: ProductosComponent
     },
-    { path: 'producto/:id', component: ProductoDetalleComponent }
+    { path: 'producto/:id', component: ProductoDetalleComponent },
+    { path: 'catalogo', component: CatalogoComponent }
+
 
 
 ];
