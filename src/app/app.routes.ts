@@ -47,6 +47,4 @@ export const routes: Routes = [
     { path: 'producto/:id', component: ProductoDetalleComponent },
     { path: 'catalogo', component: CatalogoComponent }
 
-
-
 ];
