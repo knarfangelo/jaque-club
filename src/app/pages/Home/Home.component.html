@@ -1,16 +1,27 @@
 <app-navbar></app-navbar>
 <header>
-    <img class="background" src="backgroundhome.webp" alt="">
-    <section class="content">
-        <h2>!Escogé tu color, elige tu camino y haz tu <br> Jaque!</h2>
-  <ng-container *ngFor="let img of images; let i = index">
-    <img [src]="img" alt="pomo de color" class="pomo"
-         [hidden]="i !== index">
-  </ng-container>        <h2 class="compra">Compra ahora y unete al club</h2>
-    </section>
-    <section class="presentacion">
-       <app-test-presentacion></app-test-presentacion>
-    </section>
+<img class="fondo" src="backgroundhome.webp" alt="">
+<section class="termos">
+  <h1>¡Elige tu color, escoge tu camino y haz tu <br>
+Jaque!</h1>
+    <div class="pomos">
+      <img *ngFor="let pomo of pomos; let i = index"
+           [src]="pomo"
+           [hidden]="i !== currentIndex"
+           alt="pomo">
+    </div>
+    <button class="comprar">Comprar Ahora</button>
+</section>
 </header>
+<section class="logotipo">
+  <section class="logo">
+    <img class="backgroundlogo" src="backgroundlogo.webp" alt="">
+    <section class="foregroundlogo">
+      <p class="izquierda">UNETE A</p>
+    <app-logo-jaque></app-logo-jaque>
+    <p class="derecha">AHORA</p>
+  </section>
+  </section>
+</section>
 <app-footer></app-footer>
 

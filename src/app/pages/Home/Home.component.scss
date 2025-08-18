@@ -1,62 +1,118 @@
+
 header {
+  width: 100%;
+  height: calc(200vh - 90px);
+
+  .fondo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+  }
+
+  .termos {
+    font-family: 'MirrenBcb-Regular';
+    position: relative;
+    z-index: 20;
+    width: 100%;
+    height: calc(100vh - 90px);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 90px;
+
+    h1 {
+      color: #fff;
+      text-shadow:1px 1px 2px #000;
+      margin: 0;
+      text-align: center;
+    }
+
+    .pomos {
+      width: 50%;
+      height: 50%;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        position: absolute;
+        width: auto;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+
+    .comprar {
+      padding: 5px 25px;
+      font-size: 45px;
+      color: #fff;
+      cursor: pointer;
+      background: #2a7d58c9;
+      border-radius: 10px;
+      border: 1px solid #fff;
+    }
+  }
+
+}
+
+.logotipo {
+  position: absolute;
   display: block;
-  min-height: 300vh;
-}
-
-.background {
   width: 100%;
-  height: 100vh;
-  object-fit: cover;
-  position: absolute;
-  z-index: 10;
+  height: 200vh;
+  background-color: red;
   top: 0;
-  left: 0;
-}
 
-.content {
-  font-family: 'TwentiethCentury';
-  width: 100%;
-  position: absolute;
-  z-index: 20;
-  color: #fff;
-  height: calc(100vh - 90px); 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
-  padding-bottom: 90px;
+  .logo {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rebeccapurple;
+    position: sticky;
+    top: 0;
+    left: 0;
 
-  h2 {
-    font-size: 25px;
-    text-align: center;
-    margin-bottom: 20px;
+    .backgroundlogo {
+      position: absolute;
+      width: 100%;
+      height: 100vh;
+      object-fit: cover;
+      object-position: center;
+    }
+    .foregroundlogo {
+      font-family: 'MirrenBcb-Regular';
+      position: relative;
+      z-index: 10;
+      width: 90%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      p {
+        font-size: 10vw;
+        color: #fff;
+        position: absolute;
+        text-shadow: 1px 1px 3px #000;
+      }
+
+        .izquierda {
+          left: 0;
+        }
+
+        .derecha {
+          right: 0;
+        } 
+    }
+
   }
-
-  .compra {
-    border: 1px solid #fff;
-    padding: 15px 20px;
-  }
-
-  .pomo {
-    height: calc(80vh - 400px);
-  }
-}
-
-.presentacion {
-  display: flex;
-  width: 100%;
-  height: auto;
-  position: relative;
-  z-index: 5;
-  top: 0;
-  left: 0;
-}
-
-app-presentacion {
-  width: 100%;
-}
-
-app-test-presentacion {
-  width: 100%;
 }

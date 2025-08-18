@@ -4,13 +4,13 @@ background-color: #fff;
   border-radius: 50%;
   align-items: center;
   justify-content: center;
-  width: 35vw;
-  height: 35vw;
+  width: 32vw;
+  height: 32vw;
   overflow: hidden;
 
   img {
-    width: 43vw;
-    height: 43vw;
-    object-fit: contain;
+    width: 40vw;
+    height: 40vw;
+    object-fit: cover;
   }
 }

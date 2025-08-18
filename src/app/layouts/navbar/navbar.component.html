@@ -1,16 +1,9 @@
-<nav [ngClass]="{ 'open': isMenuOpen }">
-    <a routerLink="/" class="logo"><img src="logo.webp" alt="jaque"></a>
-    <span class="circle"></span>
-    <a routerLink="/productos">Productos Jaque</a>
-    <a routerLink="/catalogo">Cátalogo</a>
-    <a routerLink="/contacto">Contacto</a>
-    <a class="comprar" routerLink="/productos">Comprar ahora</a>
+<nav>
+    <button class="logo"><img src="logo.webp" alt="logo de jaque club"></button>
+    <button class="link">Productos Jaque</button>
+    <button class="link">Cátalogo</button>
+    <button class="link">Contacto</button>
+    <button class="carrito"><img src="carrito.webp" alt="carrito de compras"></button>
+    <button class="link">¡Comprar Ahora!</button>
 </nav>
-
-<div class="relleno">
-</div>
-
-<div class="bloque">
-    <button routerLink="/"><img src="logo.webp" alt=""></button>
-    <button (click)="toggleMenu()" class="navbutton"><i class="bi bi-list"></i></button>
-</div>
+<div class="barra"></div>
