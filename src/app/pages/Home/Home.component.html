@@ -17,10 +17,12 @@ Jaque!</h1>
   <section class="logo">
     <img class="backgroundlogo" src="backgroundlogo.webp" alt="">
     <section class="foregroundlogo">
-      <p class="izquierda">UNETE A</p>
-    <app-logo-jaque></app-logo-jaque>
-    <p class="derecha">AHORA</p>
-  </section>
+      <p class="izquierda">{{ leftText }}</p>
+      <app-logo-jaque></app-logo-jaque>
+      <p class="derecha">{{ rightText }}</p>
+      <div class="scroll-line top"></div>
+      <div class="scroll-line bottom"></div>
+    </section>
   </section>
 </section>
 <app-footer></app-footer>

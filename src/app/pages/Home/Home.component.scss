@@ -1,7 +1,7 @@
 
 header {
   width: 100%;
-  height: calc(200vh - 90px);
+  height: calc(300vh - 90px);
 
   .fondo {
     width: 100%;
@@ -66,7 +66,7 @@ header {
   position: absolute;
   display: block;
   width: 100%;
-  height: 200vh;
+  height: 300vh;
   background-color: red;
   top: 0;
 
@@ -115,4 +115,12 @@ header {
     }
 
   }
+}
+
+.scroll-line.top {
+  top: 300px; /* inicio de la zona de activación */
+}
+
+.scroll-line.bottom {
+  top: 600px; /* fin de la zona de activación */
 }
