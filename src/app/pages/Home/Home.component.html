@@ -1,29 +1,54 @@
 <app-navbar></app-navbar>
 <header>
-<img class="fondo" src="backgroundhome.webp" alt="">
-<section class="termos">
-  <h1>¡Elige tu color, escoge tu camino y haz tu <br>
-Jaque!</h1>
-    <div class="pomos">
-      <img *ngFor="let pomo of pomos; let i = index"
-           [src]="pomo"
-           [hidden]="i !== currentIndex"
-           alt="pomo">
-    </div>
-    <button class="comprar">Comprar Ahora</button>
-</section>
+  <div class="trigger">
+    <div class="trigger-1"></div>
+    <div class="trigger-2"></div>
+    <div class="trigger-3"></div>
+  </div>
 </header>
+
 <section class="logotipo">
   <section class="logo">
-    <img class="backgroundlogo" src="backgroundlogo.webp" alt="">
+    <video #videoBg 
+          class="backgroundlogo" 
+          src="media/videos_webm/videodeporte.mp4" 
+          muted 
+          playsinline>
+    </video>    
+
     <section class="foregroundlogo">
-      <p class="izquierda">{{ leftText }}</p>
-      <app-logo-jaque></app-logo-jaque>
-      <p class="derecha">{{ rightText }}</p>
-      <div class="scroll-line top"></div>
-      <div class="scroll-line bottom"></div>
+      <!-- Texto izquierda -->
+      <p #izquierda class="izquierda">{{ leftText }}</p>
+
+      <!-- Termos siempre en DOM -->
+      <section class="termos" [hidden]="showLogo">
+        <h1>¡Elige tu color, escoge tu camino y haz tu <br>Jaque!</h1>
+        <div class="pomos">
+          <img *ngFor="let pomo of pomos; let i = index"
+               [src]="pomo"
+               [hidden]="i !== currentIndex"
+               alt="pomo">
+        </div>
+        <button class="comprar">Comprar Ahora</button>
+      </section>
+
+      <!-- Logo siempre en DOM -->
+      <!-- Logo SIEMPRE en el DOM -->
+      <div class="logo-wrapper" #logoWrapper>
+        <app-logo-jaque></app-logo-jaque>
+      </div>
+
+    
+      <!-- Texto derecha -->
+      <p #derecha class="derecha">{{ rightText }}</p>
     </section>
   </section>
 </section>
-<app-footer></app-footer>
-
+<app-termos-jaque></app-termos-jaque>
+<a 
+  href="https://wa.me/519XXXXXXXX" 
+  target="_blank" 
+  class="whatsapp-button"
+  aria-label="Contactar por WhatsApp">
+  <img src="/whatsapp.png" alt="WhatsApp">
+</a><app-footer></app-footer>

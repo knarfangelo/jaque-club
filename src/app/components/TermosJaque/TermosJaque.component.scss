@@ -1,0 +1,189 @@
+  .termos-jaque {
+    width: 100%;
+    display: flex;
+    flex-direction: column; /* se apilan las secciones */
+  }
+
+  .termos-jaque section {
+    width: 100%;
+    height: 100vh;
+    position: relative;  /* para posicionar los p flotando */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .termos-jaque section p {
+    font-size: 10vw;
+    font-family: 'MirrenBcb-Regular';
+    position: absolute;   /* flotando sobre la sección */
+    color: #fff;
+    text-shadow: 1px 1px 3px #000;
+    margin: 0;
+  }
+
+  .road {
+    top: 15%;
+    left: 5%;
+  }
+
+  .to {
+    bottom: 15%;
+    left: 25%;
+  }
+
+  .relative {
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+  }
+
+  .pomo-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 40vw;
+    height: 30vw; /* altura de la imagen, ajustable */
+
+    .base {
+   width: 25vw;
+    height: 25vw;
+    box-sizing: border-box;
+    padding: 2vw;
+      object-fit: contain;
+      display: block;
+      background-color: #fff;
+      border-radius: 50%;
+    }
+
+    .hover {
+      position: absolute;
+      width: auto;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 0.3s;
+      pointer-events: none;
+    }
+
+    &:hover .hover {
+      opacity: 1;
+    }
+
+    &:hover .base {
+      opacity: 0;
+    }
+  }
+
+  .loyalty {
+    background-image: url('/backgroundopomos/convertidas/backgroundloyalty.webp');
+    background-size: cover;
+    object-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .success {
+    background-image: url('/backgroundopomos/convertidas/backgroundsuccess.webp');
+    background-size: cover;
+    object-position: center;
+  }
+
+  .decision {
+    background-image: url('/backgroundopomos/convertidas/backgrounddecision.webp');
+    background-size: cover;
+    object-position: center;
+  }
+
+  .love {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 40vw;
+    height: 30vw;  /* altura de la imagen, ajustable */
+
+    .fondo {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      .bg-left,
+      .bg-right {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 50%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      .bg-left {
+        width: 110%;
+      }
+
+      .bg-left {
+        background-image: url('/backgroundopomos/convertidas/backgroundlove.webp');
+        left: -45%;
+      }
+
+      .bg-right {
+        background-image: url('/backgroundopomos/convertidas/backgroundlove2.webp');
+        left: 50%;    // empieza en la mitad derecha
+      }
+    }
+
+    p {
+      font-size: 10vw;
+      font-family: 'MirrenBcb-Regular';
+      position: absolute;
+      color: #fff;
+      text-shadow: 1px 1px 3px #000;
+    }
+
+    .road { top: 15%; left: 5%; }
+    .to { bottom: 15%; left: 25%; }
+    .relative { top: 50%; right: 5%; transform: translateY(-50%); }
+
+    .pomo-wrapper {
+
+      
+      &:hover .hover {
+        opacity: 1;
+      }
+
+      &:hover .base {
+        opacity: 0;
+      }
+    }
+  }
+
+
+  .termos-jaque section p {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+}
+
+.termos-jaque section.animate-in p.road {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0s;
+}
+
+.termos-jaque section.animate-in p.to {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.2s;
+}
+
+.termos-jaque section.animate-in p.relative {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.4s;
+}
+
