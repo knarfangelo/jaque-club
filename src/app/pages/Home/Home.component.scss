@@ -111,6 +111,18 @@
             left: 0;
           }
 
+          .izquierda::after {
+            content: "";
+            position: absolute;
+            top: -1vw;
+            left: -0vw;
+            transform: rotate(-270deg);
+            width: 4vw;   /* tamaño del svg */
+            height: 5vw;
+            background: url('/accent.svg') no-repeat center/contain;
+            pointer-events: none;
+          }
+
           .derecha {
             right: 0;
           } 
@@ -170,3 +182,4 @@
       box-shadow: 0 4px 15px rgba(0,0,0,0.3);
     }
   }
+

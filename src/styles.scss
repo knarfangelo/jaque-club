@@ -386,3 +386,8 @@ template {
 [hidden] {
   display: none;
 }
+
+swiper-container,
+swiper-slide {
+  overflow: visible !important;
+}
