@@ -1,0 +1,46 @@
+[
+  {
+    "id": 1,
+    "titulo": "Playadito, Yerba Mate con Palo",
+    "descripcion": "Una mezcla equilibrada de hoja, palo y polvo de yerba mate, reconocida por su agradable sabor suave. Ideal para quienes consumen mate de manera habitual y valoran un gusto delicado y persistente. También es una excelente opción para quienes desean dar sus primeros pasos en el mundo de la yerba mate.",
+    "bandera": "flag-argentina.svg",
+    "imagen": "yerbas/playadito.webp",
+    "precios": {
+      "500gr": "S/.40",
+      "1kg": "S/.60"
+    }
+  },
+  {
+    "id": 2,
+    "titulo": "Canarias Serena “Hierbas Compuestas",
+    "descripcion": "De molienda ﬁna, fusiona la calidad inconfundible de la yerba Canarias Tradicional con un delicado equilibrio de tilo, toronjil, menta y mburucuyá (Uruguay). Esta combinación suaviza levemente la intensidad del sabor.",
+    "bandera": "flag-uruguay.svg",
+    "imagen": "yerbas/canarias-te-serena.webp",
+    "precios": {
+      "500gr": "S/.35",
+      "1kg": "S/.55"
+    }
+  },
+  {
+    "id": 3,
+    "titulo": "Canarias Té Rojo y Centella",
+    "descripcion": "Elaborada a partir de nuestra Yerba Mate, enriquecida con té rojo Pu-erh y centella asiática, ingredientes reconocidos por sus beneﬁcios para la salud: el té rojo favorece la pérdida de peso, mientras que la centella asiática es una aliada contra la celulitis y el envejecimiento cutáneo.",
+    "bandera": "flag-uruguay.svg",
+    "imagen": "yerbas/canarias-te-rojo.webp",
+    "precios": {
+      "500gr": "S/.38",
+      "1kg": "S/.60"
+    }
+  },
+  {
+    "id": 4,
+    "titulo": "Canarias Té Verde y Jengibre",
+    "descripcion": "A las reconocidas propiedades de la Yerba Mate se suman las del té verde y el jengibre, hierbas valoradas por sus múltiples beneﬁcios para la salud: el té verde aporta antioxidantes, mientras que el jengibre favorece la digestión.",
+    "bandera": "flag-uruguay.svg",
+    "imagen": "yerbas/canarias-te-verde.webp",
+    "precios": {
+      "500gr": "S/.38",
+      "1kg": "S/.60"
+    }
+  }
+]

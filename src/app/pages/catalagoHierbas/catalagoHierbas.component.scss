@@ -1,95 +1,86 @@
-.catalogo {
-  display: flex;
+.catalogo-hierbas {
   width: 100%;
+  min-height: 100vh;
   height: auto;
   position: relative;
-  top: 0;
-}
-.contenedor-filtros {
-  width: 100%;
   display: flex;
-  min-height: calc(100vh - 90px); /* altura de la barra de navegación */
-  flex-direction: column;
-  height:auto;
-  gap: 20px;
-  align-items: center;
-  padding: 20px;
 }
-.fondo {
+
+.background {
+
   width: 100%;
-  min-height: 100vh;   /* altura mínima pantalla */
-  height: 190%;        /* se asegura de ocupar todo */
-  flex: 1;
+  height: 100%;
+  background-color: peachpuff;
   position: absolute;
-  top: 0;
-  left: 0;             /* asegúrate que esté alineado */
 
   img {
-    position: absolute;
-    top: -90px;
-    left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    position: absolute;
   }
+
 }
 
-.contenedor-hierbas {
+.productos {
   width: 100%;
-  display: flex;
-  gap: 30px;
-  align-items: stretch; // hace que todas tengan la misma altura
+  height: fit-content;
+  margin: auto;
+  box-sizing: border-box;
+  padding: 90px 45px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  position: relative;
+  align-items: center;
+  gap: 45px;
+  z-index: 10;
 }
 
-.hierbas {
-  flex: 1 1 0; // 👈 rellena automáticamente el espacio disponible
+.producto {
+  background: #F2F2F2;
+  border-radius: 15px;
   display: flex;
   flex-direction: column;
-background: #B3B3B3;
-background: linear-gradient(0deg,rgba(179, 179, 179, 1) 0%, rgba(242, 242, 242, 1) 100%);  padding: 20px;
+  width: 100%;
+  height: 100%;
+  color: #fff;
   box-sizing: border-box;
-  border-radius: 15px;
-  z-index: 10;
-  align-items: center;
+  padding: 25px 55px;
+  background-color: #304C3A;
 
   h1 {
-    font-size: 30px;
-    width: 65%;
     text-align: center;
-    color: #333333;
-    font-family: 'TwentiethCentury';
     font-weight: bold;
-    margin: 0;  
+    margin: 0;
     margin-bottom: auto;
-  }
-
-  img {
-    height: 250px;
-    width: 140px;
-    object-fit: cover;
-    margin-bottom: 50px;
-
+    font-size: 30px;
   }
 
   p,button {
     font-size: 25px;
-  font-family: 'TwentiethCentury';
-    color: #333333;
+    text-align: center;
   }
 
-  button {
-        border: 1px solid #333333;
-        width: 100%;
-        border-radius: 15px;
-        padding: 15px 0;
-        margin-top: 20px;
-        font-weight: bold;
-        margin-bottom: 20px;
-      }
-
-
-  &:nth-child(1) > img {
-    height: 220px;
+  .peso {
+    margin-bottom: 15px;
   }
+
+  .precio {
+    border: 1px solid rgba(51, 51, 51, 1);
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    border-radius: 15px;
+    padding: 20px;
+    cursor: pointer;
+  }
+  img {
+    width: 60%;
+    margin: 25px auto;
+    margin-bottom: 45px;
+    object-position: center;
+
+  }
+
 }
 

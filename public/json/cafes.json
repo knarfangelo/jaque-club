@@ -1,0 +1,35 @@
+[
+  {
+    "id": 1,
+    "titulo": "Maxim Original Café Instantaneo",
+    "descripcion": "El café instantáneo número uno de Corea. Su fórmula combina café de calidad premium, azúcar y crema en la medida justa para ofrecerte, en segundos, una taza deliciosa y equilibrada, sin necesidad de añadir nada más. Ideal para quienes buscan practicidad sin sacriﬁcar el placer de un buen café. Con 100 sticks individuales, tendrás siempre a mano el impulso perfecto para comenzar tu día o recargar energías en cualquier momento.",
+    "bandera": "flag-korea.svg",
+    "imagen": "cafes/cafe-rojo.webp",
+    "precios": "100 coffee bag = S/. 99.50"
+  },
+  {
+    "id": 2,
+    "titulo": "Maxim Mocha Café Instantaneo",
+    "descripcion": "El café instantáneo más famoso de Corea, ahora en versión suave y equilibrada. Combina café premium, azúcar y crema en la medida justa para darte, en segundos, una taza cremosa y aromática, lista para disfrutar sin añadir nada más. Con 100 sticks individuales, es perfecto para cualquier momento y lugar.",
+    "bandera": "flag-korea.svg",
+    "imagen": "cafes/cafe-amarillo.webp",
+    "precios": "100 coffee bag = S/. 99.50"
+
+  },
+  {
+    "id": 3,
+    "titulo": "Cativa Café “Tostado medio”",
+    "descripcion": "Descubre la esencia del Café Villa Rica de Cativa Café, un grano de origen peruano cultivado en las alturas de Oxapampa a 1500 m.s.n.m., donde el clima y la tierra fértil dan vida a una taza de calidad excepcional. Cuidadosamente procesadas bajo el método lavado para preservar su pureza y complejidad. Con un tostado medio, ofrece un balance perfecto entre aroma, cuerpo y acidez, ideal para quienes buscan un café peruano auténtico y lleno de carácter.",
+    "bandera": "flag-peru.svg",
+    "imagen": "cafes/cafe-negro.webp",
+    "precios": "250gr= S/. 34.90"
+  },
+  {
+    "id": 4,
+    "titulo": "Eco Andino “Café verde”",
+    "descripcion": "El Café Verde Orgánico en Polvo es un energizante natural que revitaliza tu cuerpo y despierta tus sentidos con su aroma fresco y sabor único. Cosechado en Satipo, Junín, esta variedad se mantiene en su estado puro sin tostar, conservando su característico color verde y sus propiedades originales. Con menos del 20% de cafeína que el café negro, es ideal para quienes buscan energía sostenida sin sobrecargar el organismo.",
+    "bandera": "flag-peru.svg",
+    "imagen": "cafes/cafe-blanco.webp",
+    "precios": "250gr= S/. 34.90"
+  }
+]

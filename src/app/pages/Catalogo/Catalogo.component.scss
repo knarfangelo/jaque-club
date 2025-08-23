@@ -1,98 +1,84 @@
-:host {
-  display: block;
-}
-
-ul {
-  list-style-type: disc;   /* circulitos por defecto */
-  padding-left: 1.5rem;    /* espacio a la izquierda para que se vean */
-}
-
-  .link {
-    padding: 1vw;
-    width: 17vw;
-    font-size: 1.5vw;
-    border-radius: 5px;
-    background: #2a7d58e3;
-    color: #fff;
-    border: 1px solid #fff;
-    cursor: pointer;
-    margin: 0 auto;
-    margin-top: 15px;
-    margin-bottom: 15px;
-  }
-
 swiper-container {
   width: 100%;
-  height:100%;
-  position: absolute;
-  top: 0;
+  height: 100vh;
 }
 
 swiper-slide {
-  width: 100%;
-  height: 100%;
-  overflow: auto;
+  box-sizing: border-box;
+  padding-top: 90px;
+  position: relative;
 
-    .backgroundcatalogo {
+
+  .background {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
     object-fit: cover;
+
+    img {
+      width: 100%;
+      height: 100vh;
+      object-fit: cover;
+      object-position: center;
+    }
   }
-
 }
 
-.catalogo {
-  width: 100%;
-  min-height: calc(100vh - 90px); /* altura de la barra de navegación */
-}
-
-.catalogo-1 {
-  color: #fff;
-  overflow: auto;
-  position: relative;
-  margin-top: 90px;
+.contenido {
+  z-index: 10;
+  width: 50%;
   box-sizing: border-box;
-  padding: 0 15px;
+  padding: 0 3vw;
+  position: relative;
+  color: #fff;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  width: 50%;
-  height: calc(100vh - 90px); /* altura de la barra de navegación */
 
   h1 {
     font-family: 'MirrenBcb-Regular';
-    font-size: 50px;
-    margin-top: 0;
-    line-height: 0.8;
-    margin-bottom: 0;
+    width: 70%;
+    margin: 0 auto;
+    font-size: 3.3vw;
     text-align: center;
   }
 
-  ul {
-  font-family: 'TwentiethCentury';
-  font-size: 25px;
-  display: flex;
-  flex-direction: column;
-  gap: 1vw;
+  button {
+    padding: 1vw 2.5vw;
+    margin: 3vw auto;
+    cursor: pointer;
+    border-radius: 0.5vw;
+    background: #004D39;
+    background: linear-gradient(270deg,rgba(0, 77, 57, 1) 0%, rgba(34, 150, 115, 1) 100%);
+    color: #fff;
+    border: 1px solid #fff;
+    font-size: 2vw;
   }
 
-  
-
+  ul {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    font-size: 1.3vw;
+  list-style-type: disc; /* pone puntitos */
+  padding-left: 0.3vw;    /* agrega espacio para que se vean */
+  }
 }
 
-/* Estilo a la paginación */
-swiper-container::part(bullet), swiper-container::part(bullet-active) {
-  width: 20px;
-  height: 20px;
-  background: #fff;
-  opacity: 1;
-  margin: 0 10px;
-}
 swiper-container::part(bullet-active) {
-  outline: 3px solid #fff;
-  background-color: #2a7d58e3;
+ background: #004D39;
+ margin: 5px 20px;
+ padding: 5px;
+ outline: 3px solid #fff;
+ background: linear-gradient(270deg,rgba(0, 77, 57, 1) 0%, rgba(34, 150, 115, 1) 100%);
+}
+
+swiper-container::part(bullet) {
+background-color: #fff;
+margin: 5px 20px;
+padding: 5px;
+ outline: 3px solid #fff;
 }

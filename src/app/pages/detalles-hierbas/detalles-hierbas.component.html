@@ -1,0 +1,42 @@
+<app-navbar></app-navbar>
+
+<section class="catalogo-hierbas" *ngIf="hierba">
+  <div class="background">
+    <img src="/yerbas/fondoyerbas.webp" alt="Fondo catálogo yerbas">
+    <img src="/yerbas/filtroverdoso.webp" alt="Filtro verdoso">
+  </div>
+
+  <div class="productos">
+    <article class="producto">
+      <section class="imagen-producto">
+        <img class="bandera" [src]="'/' + hierba.bandera" [alt]="'Bandera ' + hierba.titulo">
+        <img [src]="'/' + hierba.imagen" [alt]="hierba.titulo">
+      </section>
+      <section class="titulo-producto">
+        <h1>{{ hierba.titulo }}</h1>
+      </section>
+
+      <section class="descripcion-producto">
+        <p>{{ hierba.descripcion }}</p>
+
+        <div class="botones">
+          <div class="precio">
+            <p>500 gr = {{ hierba.precios['500gr'] }}</p>
+            <p>1 kg = {{ hierba.precios['1kg'] }}</p>
+          </div>
+
+          <a 
+            href="https://wa.me/+51967138339" 
+            target="_blank" 
+            class="whatsapp-asesor"
+            aria-label="Contactar por WhatsApp">
+            <img src="assets/whatsapp.png" alt="WhatsApp">
+            Chatea con <br> un Asesor
+          </a>
+        </div>
+      </section>
+    </article>
+  </div>
+</section>
+
+<app-footer></app-footer>

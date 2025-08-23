@@ -1,9 +1,11 @@
 <nav>
-    <button class="logo"><img src="logo.webp" alt="logo de jaque club"></button>
-    <button class="link" routerLink="/">Productos Jaque</button>
-    <button class="link" routerLink="/catalogo">Cátalogo</button>
-    <button class="link">Contacto</button>
-    <button class="carrito"><img src="carrito.webp" alt="carrito de compras"></button>
-    <button class="link">¡Comprar Ahora!</button>
+  <button class="logo" routerLink="/" (click)="goTop()">
+    <img src="logo.webp" alt="logo de jaque club">
+  </button>
+  <button class="link" routerLink="/catalogo-jaques" (click)="goTop()">Productos Jaque</button>
+  <button class="link" routerLink="/catalogo" (click)="goTop()">Catálogo</button>
+  <button class="link" routerLink="/contacto" (click)="goTop()">Contacto</button>
+  <button class="carrito"><img src="carrito.webp" alt="carrito de compras"></button>
+  <button class="link" routerLink="/catalogo-jaques" (click)="goTop()">¡Comprar Ahora!</button>
 </nav>
 <div class="barra"></div>

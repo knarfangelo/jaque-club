@@ -1,0 +1,88 @@
+.catalogo-hierbas {
+  width: 100%;
+  min-height: 100vh;
+  height: auto;
+  position: relative;
+  display: flex;
+}
+
+.background {
+
+  width: 100%;
+  height: 100%;
+  background-color: peachpuff;
+  position: absolute;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    object-position: top;
+  }
+
+}
+
+.productos {
+  width: 100%;
+  height: fit-content;
+  margin: auto;
+  box-sizing: border-box;
+  padding: 90px 45px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  position: relative;
+  align-items: center;
+  gap: 45px;
+  z-index: 10;
+}
+
+.producto {
+  background: #F2F2F2;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  box-sizing: border-box;
+  padding: 25px 55px;
+  background-color: #304C3A;
+
+  h1 {
+    text-align: center;
+    font-weight: bold;
+    margin: 0;
+    margin-bottom: auto;
+    font-size: 30px;
+  }
+
+  p,button {
+    font-size: 25px;
+    text-align: center;
+  }
+
+  .peso {
+    margin-bottom: 15px;
+  }
+
+  .precio {
+    border: 1px solid rgba(51, 51, 51, 1);
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    border-radius: 15px;
+    padding: 20px;
+    cursor: pointer;
+  }
+
+  img {
+    width: 60%;
+    margin: 25px auto;
+    margin-bottom: 45px;
+    object-position: center;
+
+  }
+
+}
+

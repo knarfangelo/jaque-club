@@ -8,6 +8,13 @@ import { LibroReclamacionesComponent } from './pages/libroReclamaciones/libroRec
 import { CatalogoComponent } from './pages/Catalogo/Catalogo.component';
 import { TermosJaqueComponent } from './components/TermosJaque/TermosJaque.component';
 import { CatalagoHierbasComponent } from './pages/catalagoHierbas/catalagoHierbas.component';
+import { DetallesHierbasComponent } from './pages/detalles-hierbas/detalles-hierbas.component';
+import { CatalogoCafesComponent } from './pages/catalogoCafes/catalogoCafes.component';
+import { DetallesCafesComponent } from './pages/detalles-cafes/detalles-cafes.component';
+import { CatalogoInfucionesComponent } from './pages/catalogoInfuciones/catalogoInfuciones.component';
+import { DetallesInfucionesComponent } from './pages/detalles-infuciones/detalles-infuciones.component';
+import { CatalogoJaquesComponent } from './pages/catalogoJaques/catalogoJaques.component';
+import { DetallesJaquesComponent } from './pages/detalles-jaques/detalles-jaques.component';
 
 export const routes: Routes = [
 
@@ -37,6 +44,18 @@ export const routes: Routes = [
     },
     { path: 'catalogo', component: CatalogoComponent },
     { path: 'test', component:TermosJaqueComponent },
-    { path: 'catalogo-hierbas', component: CatalagoHierbasComponent }
+    { path: 'catalogo-hierbas', component: CatalagoHierbasComponent },
+    {
+    path: 'catalogo-hierbas/detalle/:id', 
+    component: DetallesHierbasComponent
+    },
+    { path: 'catalogo-cafes', component: CatalogoCafesComponent },
+    { path: 'catalogo-cafes/detalle/:id', component: DetallesCafesComponent },
 
+    { path: 'catalogo-infuciones', component: CatalogoInfucionesComponent },
+    { path: 'catalogo-infuciones/detalle/:id', component: DetallesInfucionesComponent },
+
+
+    { path: 'catalogo-jaques', component: CatalogoJaquesComponent },
+    { path: 'catalogo-jaques/detalle/:id', component: DetallesJaquesComponent }
 ];

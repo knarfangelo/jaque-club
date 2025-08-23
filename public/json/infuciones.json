@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "titulo": "Playadito, Yerba Mate con Palo",
+    "descripcion": "Una mezcla equilibrada de hoja, palo y polvo de yerba mate, reconocida por su agradable sabor suave. Ideal para quienes consumen mate de manera habitual y valoran un gusto delicado y persistente. También es una excelente opción para quienes desean dar sus primeros pasos en el mundo de la yerba mate.",
+    "bandera": "",
+    "imagen": "infuciones/infucion-morado.webp",
+    "precios": "20 tea bag= S/. 14.90"
+  },
+  {
+    "id": 2,
+    "titulo": "Canarias Serena “Hierbas Compuestas",
+    "descripcion": "De molienda ﬁna, fusiona la calidad inconfundible de la yerba Canarias Tradicional con un delicado equilibrio de tilo, toronjil, menta y mburucuyá (Uruguay). Esta combinación suaviza levemente la intensidad del sabor.",
+    "bandera": "",
+    "imagen": "infuciones/infucion-naranja.webp",
+    "precios": "20 tea bag= S/. 14.90"
+
+  },
+  {
+    "id": 3,
+    "titulo": "Canarias Té Rojo y Centella",
+    "descripcion": "Elaborada a partir de nuestra Yerba Mate, enriquecida con té rojo Pu-erh y centella asiática, ingredientes reconocidos por sus beneﬁcios para la salud: el té rojo favorece la pérdida de peso, mientras que la centella asiática es una aliada contra la celulitis y el envejecimiento cutáneo.",
+    "bandera": "",
+    "imagen": "infuciones/infucion-roja.webp",
+    "precios": "20 tea bag= S/. 14.90"
+
+  },
+  {
+    "id": 4,
+    "titulo": "Canarias Té Verde y Jengibre",
+    "descripcion": "A las reconocidas propiedades de la Yerba Mate se suman las del té verde y el jengibre, hierbas valoradas por sus múltiples beneﬁcios para la salud: el té verde aporta antioxidantes, mientras que el jengibre favorece la digestión.",
+    "bandera": "",
+    "imagen": "infuciones/infucion-verde.webp",
+    "precios": "20 tea bag= S/. 14.90"
+
+  }
+]
+

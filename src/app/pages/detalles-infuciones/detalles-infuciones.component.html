@@ -1,0 +1,38 @@
+<app-navbar></app-navbar>
+
+<section class="catalogo-hierbas" *ngIf="infucion">
+  <div class="background">
+    <img src="infuciones/backgroundinfuciones.webp" alt="">
+    <img src="yerbas/filtroverdoso.webp" alt="">
+  </div>
+  <div class="productos">
+    <div class="producto">
+      <section class="imagen-producto">
+        <img [src]="infucion.imagen" alt="Producto">
+      </section>
+
+      <section class="titulo-producto">
+        <h1>{{ infucion.titulo }}</h1>
+      </section>
+
+      <section class="descripcion-producto">
+        <p>{{ infucion.descripcion }}</p>
+        <div class="botones">
+          <button class="precio">
+            <p>{{ infucion.precios }}</p>
+          </button>
+          <a 
+            href="https://wa.me/+51967138339" 
+            target="_blank" 
+            class="whatsapp-asesor"
+            aria-label="Contactar por WhatsApp">
+            <img src="/whatsapp.png" alt="WhatsApp">
+            Chatea con <br> un Asesor
+          </a>
+        </div>
+      </section>
+    </div>
+  </div>
+</section>
+
+<app-footer></app-footer>
