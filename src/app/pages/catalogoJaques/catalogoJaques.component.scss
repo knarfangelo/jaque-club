@@ -24,65 +24,59 @@
 }
 
 .productos {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 0.8vw;
   width: 100%;
-  height: fit-content;
-  margin: auto;
-  box-sizing: border-box;
-  padding: 90px 45px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  height: min-content;
   position: relative;
-  align-items: center;
-  gap: 45px;
-  z-index: 10;
-}
+  display: grid;
+  margin: auto 10em;
+  gap: 3em;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: min-content;
 
-.producto {
-  background: #F2F2F2;
-  border-radius: 15px;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
-  color: #fff;
-  box-sizing: border-box;
-  padding: 25px 55px;
-  background-color: #304C3A;
-
-  h1 {
-    text-align: center;
-    font-weight: bold;
-    margin: 0;
-    margin-bottom: auto;
-    font-size: 30px;
-  }
-
-  p,button {
-    font-size: 25px;
-    text-align: center;
-  }
-
-  .peso {
-    margin-bottom: 15px;
-  }
-
-  .precio {
-    border: 1px solid rgba(51, 51, 51, 1);
-    text-align: center;
-    font-weight: bold;
-    font-size: 30px;
-    border-radius: 15px;
-    padding: 20px;
+  .producto{
     cursor: pointer;
-  }
+    font-size: 1.1em;
+    border-radius: 2em;
+    color: #fff;
+    display: flex;
+    background-color: #304C3A;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 
-  img {
-    width: 60%;
-    margin: 25px auto;
-    margin-bottom: 45px;
-    object-position: center;
+    img {
+      max-width: 8em;
+    }
 
+    p {
+      font-size: 1.5em;
+    }
+
+    .precios {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      gap: 1.5em;
+      font-size: 1.5em;
+      position: relative;
+
+      li:nth-child(1) {
+        display: flex;
+        align-items: center;
+      }
+
+      li:nth-child(1)::before {
+        content: "";
+        transform: rotate(-10deg);
+        width: 3em;
+        height: 0.1em;
+        background-color: red;
+        position: absolute;
+      }
+
+    }
   }
 
 }
-
