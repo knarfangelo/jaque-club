@@ -2,14 +2,21 @@
 
   width: 100%;
   min-height: 100vh;
-  background-image: url("/yerbas/fondoyerbas.webp");
   background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;
   background-position: center;
-  background-repeat: no-repeat;
+  
+  .background {
+  width: 100%;
+  min-height: 100vh;
+  position: absolute;
 }
+
+
+}
+
 
 
 .catalogo-jaque {
@@ -17,6 +24,8 @@
   width: 90%;
   min-height: auto;
   padding: 1em;
+  position: relative;
+  z-index: 10;
   background-color: #fff;
   font-size: 0.8vw;
   gap: 2em;
