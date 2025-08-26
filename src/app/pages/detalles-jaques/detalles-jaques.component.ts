@@ -3,6 +3,8 @@ import { FooterComponent } from "../../layouts/footer/footer.component";
 import { NavbarComponent } from "../../layouts/navbar/navbar.component";
 import { ActivatedRoute } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { ProductoService } from '../../Producto.service';
+import { TermoService } from '../../services/termo.service';
 
 @Component({
   selector: 'app-detalles-jaques',
@@ -12,11 +14,18 @@ import { CommonModule } from '@angular/common';
 })
 export class DetallesJaquesComponent {
 
-   id!: number;
+  id!: number;
+  producto: any;
 
-  constructor(private route: ActivatedRoute) {
-    this.route.paramMap.subscribe(params => {
-      this.id = Number(params.get('id')); // capturamos el id de la ruta
+  constructor(
+    private route: ActivatedRoute,
+    private termoService: TermoService
+  ) {}
+
+  ngOnInit(): void {
+    const id = Number(this.route.snapshot.paramMap.get('id'));
+    this.termoService.getProductoById(id).subscribe(data => {
+      this.producto = data;
     });
   }
 

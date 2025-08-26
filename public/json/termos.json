@@ -1,0 +1,120 @@
+{
+  "productos": [
+    {
+      "id": 1,
+      "titulo": "Jaque Road to Loyalty 1.2L",
+      "imagenes": [
+        "pomosMetalicos/JaqueBlanco.webp",
+        "bombilla.png"
+      ],
+      "descripcion": "Si elegiste este color, elegiste cumplir incluso cuando nadie te mira, es el camino de la constancia. Este color te recuerda que la disciplina diaria es la forma más alta de lealtad: hábitos simples, palabra firme y progreso silencioso. Súmate a Jaque's Club y luce tu Jaque “Road to Loyalty” con foco y compromiso.",
+      "caracteristicas": {
+        "caracteristicas1": [
+          "Acero inoxidable 18/8; Libre de BPA.",
+          "Incluye bombilla que puedes convertir en sorbete",
+          "Aislamiento al vacío de doble pared.",
+          "Tapón de alta precisión"
+        ],
+        "caracteristicas2": [
+          "Mantiene líquidos frios o calientes por más de 25 horas",
+          "A prueba de fugas.",
+          "Puedes usar la tapa como vaso fachero.",
+          "Producto apto para el lavavajillas."
+        ],
+        "caracteristicas3": [
+          "Capacidad: 1.2 It",
+          "Alto: 31 cm",
+          "Largo: 11 cm",
+          "Ancho: 10 cm"
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "titulo": "Jaque Road to Success 1.2L",
+      "imagenes": [
+        "pomosMetalicos/JaqueNegro.webp",
+        "bombilla.png"
+      ],
+      "descripcion": "Si elegiste este color, elegiste progreso real, es el camino del enfoque y la ejecución. El gráfico de este color muestra una escalera ascendente: así luce el éxito de verdad, avances y correcciones que, con constancia, te llevan más arriba. Este Jaque te recuerda cada acción, aprendizaje sin perder el plan inicial. Únete a Jaque's Club y luce tu Jaque “Road to Success” con menos ruido y más acción.",
+      "caracteristicas": {
+        "caracteristicas1": [
+          "Acero inoxidable 18/8; Libre de BPA.",
+          "Incluye bombilla que puedes convertir en sorbete",
+          "Aislamiento al vacío de doble pared.",
+          "Tapón de alta precisión"
+        ],
+        "caracteristicas2": [
+          "Mantiene líquidos frios o calientes por más de 25 horas",
+          "A prueba de fugas.",
+          "Puedes usar la tapa como vaso fachero.",
+          "Producto apto para el lavavajillas."
+        ],
+        "caracteristicas3": [
+          "Capacidad: 1.2 It",
+          "Alto: 31 cm",
+          "Largo: 11 cm",
+          "Ancho: 10 cm"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "titulo": "Jaque Road to Decision 1.2L",
+      "imagenes": [
+        "pomosMetalicos/JaqueCobre.webp",
+        "bombilla.png"
+      ],
+      "descripcion": "Si eliges este color, eliges valentía para elegir: es el camino de la claridad. El gráfico en este color comienza de un mismo START y se abre en dos trayectorias hacia diferentes ENDS: decidir es dirigir energía, decir sí con intención y no sin culpa ni arrepentimientos. Este color te recuerda que elegir te da dirección y tiempo. Entra a Jaque's Club y toma el volante con tu Jaque “Road to Decision”.",
+      "caracteristicas": {
+        "caracteristicas1": [
+          "Acero inoxidable 18/8; Libre de BPA.",
+          "Incluye bombilla que puedes convertir en sorbete",
+          "Aislamiento al vacío de doble pared.",
+          "Tapón de alta precisión"
+        ],
+        "caracteristicas2": [
+          "Mantiene líquidos frios o calientes por más de 25 horas",
+          "A prueba de fugas.",
+          "Puedes usar la tapa como vaso fachero.",
+          "Producto apto para el lavavajillas."
+        ],
+        "caracteristicas3": [
+          "Capacidad: 1.2 It",
+          "Alto: 31 cm",
+          "Largo: 11 cm",
+          "Ancho: 10 cm"
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "titulo": "Jaque Road to Love 1.2L",
+      "imagenes": [
+        "pomosMetalicos/JaqueRojo.webp",
+        "bombilla.png"
+      ],
+      "descripcion": "Si elegiste este color, elegiste cuidado verdadero, es el camino del amor bien practicado. El gráfico en este color traza una línea ascendente con un bache entre inicio y el final: los vínculos crecen con paciencia, presencia y gratitud, incluso con altibajos. Este color te recuerda que quien se cuida, cuida mejor. Sé parte del Club y enamora con tu Jaque “Road to Love”.",
+      "caracteristicas": {
+        "caracteristicas1": [
+          "Acero inoxidable 18/8; Libre de BPA.",
+          "Incluye bombilla que puedes convertir en sorbete",
+          "Aislamiento al vacío de doble pared.",
+          "Tapón de alta precisión"
+        ],
+        "caracteristicas2": [
+          "Mantiene líquidos frios o calientes por más de 25 horas",
+          "A prueba de fugas.",
+          "Puedes usar la tapa como vaso fachero.",
+          "Producto apto para el lavavajillas."
+        ],
+        "caracteristicas3": [
+          "Capacidad: 1.2 It",
+          "Alto: 31 cm",
+          "Largo: 11 cm",
+          "Ancho: 10 cm"
+        ]
+      }
+    }
+  ]
+}

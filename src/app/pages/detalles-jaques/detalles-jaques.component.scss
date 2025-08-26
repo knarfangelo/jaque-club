@@ -23,18 +23,38 @@
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1fr;
   grid-template-rows: auto auto auto auto 1fr; /* 👈 cada fila se ajusta */
+
   .producto {
     grid-column: 1/2;
     grid-row: 1/6;
     border-radius: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: #304C3A;
     position: relative;
 
     img {
       width: 30%;
       margin: auto;
-      position: absolute;
+      order: 3;
       height: auto;
+    }
+
+    .mas {
+      width: 1.5em;
+      order: 3;
+      height: 1.5em;
+      background-color: #95AC83;
+      color: #fff;
+      font-size: 2em;
+      border-radius: 50%;
+      display: flex;
+      font-weight: bold;
+      align-items: center;
+      justify-content: center;
+      box-sizing: border-box;
+      padding-bottom: 0.3em;
     }
     
   }
