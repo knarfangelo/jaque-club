@@ -7,12 +7,16 @@
   align-items: center;
   justify-content: center;
   background-position: center;
+  position: relative;
   
   .background {
-  width: 100%;
-  min-height: 100vh;
-  position: absolute;
-}
+
+    width: 100%;
+    min-height: 100vh;
+    height: 100%;
+    position: absolute;
+    
+  }
 
 
 }
@@ -208,4 +212,87 @@
 
   }
 
+}
+
+
+@media (width < 900px) {
+  .catalogo-jaque {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto auto;
+    font-size: 3vw;
+
+    .producto {
+      grid-column: 1/2;
+      grid-row: 1/2;
+
+      img {
+        width: 40%;
+      }
+
+      .mas {
+        width: 1em;
+        height: 1em;
+        font-size: 3em;
+      }
+    }
+
+    h1 {
+      grid-column: 1/2;
+      grid-row: 2/3;
+      font-size: 8vw;
+    }
+
+    p {
+      grid-column: 1/2;
+      grid-row: 3/4;
+      font-size: 4vw;
+    }
+
+    h2 {
+      grid-column: 1/2;
+      grid-row: 4/5;
+      font-size: 5vw;
+    }
+
+    .caracteristicas-1, .caracteristicas-2, .caracteristicas-3 {
+      grid-column: 1/2;
+      grid-row: auto;
+      font-size: 3vw;
+    }
+
+    .pagos {
+      grid-column: 1/2;
+      grid-row: auto;
+      font-size: 3vw;
+
+      .pedir {
+        font-size: 4vw;
+      }
+
+      .online {
+        font-size: 3vw;
+
+        img {
+          width: 5vw;
+          height: auto;
+        }
+      }
+
+      .cantidad {
+        font-size: 3vw;
+
+        button {
+          padding: 1em 1.5em;
+        }
+
+        .pedir {
+          font-size: 3vw;
+        }
+
+        .online {
+          font-size: 3vw;
+        }
+      }
+    }
+  }
 }
