@@ -1,5 +1,17 @@
-<nav>
+<div class="barra">
   <button class="logo" routerLink="/" (click)="goTop()">
+    <img src="logo.webp" alt="logo de jaque club">
+  </button>
+
+  <!-- Botón hamburguesa -->
+  <button class="hamburger" (click)="toggleMenu()">
+    ☰
+  </button>
+</div>
+
+<!-- Menú desplegable -->
+<nav [class.open]="menuOpen">
+  <button class="logo" routerLink="/" (click)="goTop()"> 
     <img src="logo.webp" alt="logo de jaque club">
   </button>
   <button class="link" routerLink="/catalogo-jaques" (click)="goTop()">Productos Jaque</button>
@@ -8,4 +20,3 @@
   <button class="carrito"><img src="carrito.webp" alt="carrito de compras"></button>
   <button class="link" routerLink="/catalogo-jaques" (click)="goTop()">¡Comprar Ahora!</button>
 </nav>
-<div class="barra"></div>

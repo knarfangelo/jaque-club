@@ -51,4 +51,78 @@ background: linear-gradient(270deg,rgba(0, 77, 57, 1) 0%, rgba(34, 150, 115, 1) 
 
 @media (max-width: 900px) {
 
+.barra {
+  display: block;
+  background-color: #004D39;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  left: 0;
+
+  button {
+    margin: 0 10px;
+
+    img {
+      height: 3em;
+    }
+  }
+}
+
+nav {
+  transform: translateX(-50%);
+  flex-direction: column;
+  background-color: #004D39;
+  width: 90%;
+  height: 100vh;
+  display: flex;
+  align-items: start;
+  box-sizing: border-box;
+  padding: 0 20px;
+  position: fixed;
+  z-index: 100;
+  gap: 15px;
+
+  button {
+    cursor: pointer;
+  }
+
+  .logo {
+    width: 50px;
+  }
+
+  .carrito {
+    margin-left: 0;
+  }
+
+  .link {
+    padding: 8px;
+    width: 150px;
+    border-radius: 5px;
+background: transparent;
+    border: 1px solid #fff;
+  }
+
+}
+
+nav {
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Cuando se abre */
+nav.open {
+  transform: translateX(0);
+}
+
+/* Botón hamburguesa */
+.hamburger {
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  margin-left: auto;
+}
 }

@@ -4,11 +4,23 @@
   <img [src]="producto.imagenes[2]" alt="background" class="background">
   <section class="catalogo-jaque">
 
-    <section class="producto">
-<img class="principal" [src]="producto.imagenes[0]" alt="Imagen principal">
-      <div class="mas">+</div>
-<img [src]="producto.imagenes[1]" alt="Imagen secundaria">
-    </section>
+    <swiper-container
+    class="producto"
+      direction="vertical"
+      slides-per-view="1"
+      autoplay='{"delay":2000,"disableOnInteraction":false}'>
+      <swiper-slide>
+        <img class="principal" [src]="producto.imagenes[0]" alt="Imagen principal">
+        <div class="mas">+</div>
+        <img [src]="producto.imagenes[1]" alt="Imagen secundaria">
+      </swiper-slide>
+      <swiper-slide>
+        <img class="secundario" [src]="producto.imagenes[3]" alt="Imagen principal">
+      </swiper-slide>
+      <swiper-slide>
+        <img class="tercero" [src]="producto.imagenes[4]" alt="Imagen principal">
+      </swiper-slide>
+    </swiper-container>
 
     <h1>{{ producto.titulo }}</h1>
 

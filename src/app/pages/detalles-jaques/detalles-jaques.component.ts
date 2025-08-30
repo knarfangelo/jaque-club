@@ -1,16 +1,19 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { FooterComponent } from "../../layouts/footer/footer.component";
 import { NavbarComponent } from "../../layouts/navbar/navbar.component";
 import { ActivatedRoute } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { ProductoService } from '../../Producto.service';
 import { TermoService } from '../../services/termo.service';
+import { register } from 'swiper/element/bundle';
+
+register();
 
 @Component({
   selector: 'app-detalles-jaques',
   imports: [CommonModule, FooterComponent, NavbarComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './detalles-jaques.component.html',
-  styleUrl: './detalles-jaques.component.scss',
+  styleUrls: ['./detalles-jaques.component.scss'],
 })
 export class DetallesJaquesComponent {
 

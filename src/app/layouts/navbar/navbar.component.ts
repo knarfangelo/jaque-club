@@ -1,4 +1,4 @@
-import { Component} from '@angular/core';
+import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 
@@ -9,9 +9,14 @@ import { RouterLink } from '@angular/router';
   styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent {
+  menuOpen = false;
 
-    goTop() {
-    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' }); // animado
+  toggleMenu() {
+    this.menuOpen = !this.menuOpen;
   }
 
+  goTop() {
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+    this.menuOpen = false; // cerrar el menú al navegar
+  }
 }
