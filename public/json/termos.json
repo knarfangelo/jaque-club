@@ -3,6 +3,8 @@
     {
       "id": 1,
       "titulo": "Jaque Road to Loyalty 1.2L",
+      "video360": "videos360/loyalty360/",
+      "frameCount": 67,
       "imagenes": [
         "pomosMetalicos/JaqueBlanco.webp",
         "bombilla.png",
@@ -35,6 +37,8 @@
     {
       "id": 2,
       "titulo": "Jaque Road to Success 1.2L",
+      "video360": "videos360/success360/",
+      "frameCount": 70,
       "imagenes": [
         "pomosMetalicos/JaqueNegro.webp",
         "bombilla.png",
@@ -67,6 +71,8 @@
     {
       "id": 3,
       "titulo": "Jaque Road to Decision 1.2L",
+      "video360": "videos360/decision360/",
+      "frameCount": 87,
       "imagenes": [
         "pomosMetalicos/JaqueCobre.webp",
         "bombilla.png",
@@ -99,6 +105,8 @@
     {
       "id": 4,
       "titulo": "Jaque Road to Love 1.2L",
+      "video360": "videos360/love360/",
+      "frameCount": 80,
       "imagenes": [
         "pomosMetalicos/JaqueRojo.webp",
         "bombilla.png",

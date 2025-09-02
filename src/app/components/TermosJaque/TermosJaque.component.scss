@@ -61,8 +61,8 @@
       position: absolute;
     }
     .gif {
-   width: 25vw;
-    height: 25vw;
+   width: 24vw;
+    height: 24vw;
     box-sizing: border-box;
     padding: 2vw;
       object-fit: contain;
@@ -77,7 +77,7 @@
       width: auto;
       height: 100%;
       opacity: 0;
-      z-index: 20;
+      z-index: 5;
       transition: opacity 0.3s;
       pointer-events: none;
     }
@@ -152,29 +152,6 @@
       }
     }
 
-    p {
-      font-size: 10vw;
-      font-family: 'MirrenBcb-Regular';
-      position: absolute;
-      color: #fff;
-      text-shadow: 1px 1px 3px #000;
-    }
-
-    .road { top: 15%; left: 5%; }
-    .to { bottom: 15%; left: 25%; }
-    .relative { top: 50%; right: 5%; transform: translateY(-50%); }
-
-    .pomo-wrapper {
-
-      
-      &:hover .hover {
-        opacity: 1;
-      }
-
-      &:hover .base {
-        opacity: 0;
-      }
-    }
   }
 
 
@@ -202,3 +179,112 @@
   transition-delay: 0.4s;
 }
 
+
+@media (width < 900px) {
+
+
+  .termos-jaque {
+    width: 100%;
+    display: flex;
+    flex-direction: column; /* se apilan las secciones */
+  }
+
+  .termos-jaque section {
+    width: 100%;
+    height: 100vh;
+    position: relative;  /* para posicionar los p flotando */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .termos-jaque section p {
+    font-size: 20vw;
+    font-family: 'MirrenBcb-Regular';
+    position: absolute;   /* flotando sobre la sección */
+    color: #fff;
+    text-shadow: 1px 1px 3px #000;
+    margin:auto;
+  }
+
+  .road {
+    top: 20%;
+    left: 15%;
+  }
+
+  .to {
+    width: fit-content;
+    top: 20%;
+    right: 5%;
+  }
+
+  
+
+
+  .relative {
+    width: fit-content;
+    height: fit-content;
+    top: 70%;
+    right: 0;
+    left: 0;
+    margin: auto;
+    transform: translateY(-50%);
+  }
+
+  .pomo-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 70vw;
+    height: 60vw; /* altura de la imagen, ajustable */
+
+
+    .base {
+   width: 55vw;
+    height: 55vw;
+    box-sizing: border-box;
+    padding: 2vw;
+      object-fit: contain;
+      display: block;
+      background-color: transparent;
+      border-radius: 50%;
+      background-color: #fff;
+      z-index: 5;
+      position: absolute;
+    }
+    .gif {
+   width: 45vw;
+    height: 45vw;
+    box-sizing: border-box;
+    padding: 2vw;
+      object-fit: contain;
+      display: block;
+      border-radius: 50%;
+      position: absolute;
+      z-index: 10;
+    }
+
+    .hover {
+      position: absolute;
+      width: auto;
+      height: 100%;
+      opacity: 0;
+      z-index: 20;
+      transition: opacity 0.3s;
+      pointer-events: none;
+    }
+
+    &:hover .hover {
+      opacity: 1;
+    }
+
+    &:hover .base {
+      opacity: 0;
+    }
+  }
+
+
+
+}

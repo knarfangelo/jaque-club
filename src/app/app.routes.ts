@@ -15,6 +15,7 @@ import { CatalogoInfucionesComponent } from './pages/catalogoInfuciones/catalogo
 import { DetallesInfucionesComponent } from './pages/detalles-infuciones/detalles-infuciones.component';
 import { CatalogoJaquesComponent } from './pages/catalogoJaques/catalogoJaques.component';
 import { DetallesJaquesComponent } from './pages/detalles-jaques/detalles-jaques.component';
+import { Video360Component } from './components/video360/video360.component';
 
 export const routes: Routes = [
 
@@ -57,5 +58,7 @@ export const routes: Routes = [
 
 
     { path: 'catalogo-jaques', component: CatalogoJaquesComponent },
-    { path: 'catalogo-jaques/detalle/:id', component: DetallesJaquesComponent }
+    { path: 'catalogo-jaques/detalle/:id', component: DetallesJaquesComponent },
+
+    { path: 'video', component:Video360Component }
 ];

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, HostListener } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 
@@ -9,7 +9,9 @@ import { RouterLink } from '@angular/router';
   styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent {
-  menuOpen = false;
+ menuOpen = false;
+
+  constructor(private eRef: ElementRef) {}
 
   toggleMenu() {
     this.menuOpen = !this.menuOpen;
@@ -18,5 +20,13 @@ export class NavbarComponent {
   goTop() {
     window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
     this.menuOpen = false; // cerrar el menú al navegar
+  }
+
+  // Detectar clics globales
+  @HostListener('document:click', ['$event'])
+  handleClickOutside(event: Event) {
+    if (this.menuOpen && !this.eRef.nativeElement.contains(event.target)) {
+      this.menuOpen = false;
+    }
   }
 }

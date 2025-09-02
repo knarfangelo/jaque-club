@@ -6,11 +6,12 @@ import { LogoJaqueComponent } from "../../components/LogoJaque/LogoJaque.compone
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { TermosJaqueComponent } from "../../components/TermosJaque/TermosJaque.component";
+import { RouterLink } from '@angular/router';
 gsap.registerPlugin(ScrollTrigger);
 
 @Component({
   selector: 'app-home',
-  imports: [NavbarComponent, CommonModule, FooterComponent, LogoJaqueComponent, TermosJaqueComponent],
+  imports: [NavbarComponent, CommonModule, FooterComponent, LogoJaqueComponent, TermosJaqueComponent, RouterLink],
   templateUrl: './Home.component.html',
   styleUrl: './Home.component.scss',
 })

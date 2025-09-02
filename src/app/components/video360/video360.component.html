@@ -1,0 +1,14 @@
+<div
+  class="video-360"
+  (mousedown)="startRotate($event)"
+  (mouseup)="stopRotate()"
+  (mouseleave)="stopRotate()"
+  (mousemove)="rotate($event)"
+  (touchstart)="startRotate($event)"
+  (touchmove)="rotate($event)"
+  (touchend)="stopRotate()"
+>
+  <ng-container *ngFor="let frame of frames; let i = index">
+    <img [src]="frame" [hidden]="i !== currentFrame" />
+  </ng-container>
+</div>

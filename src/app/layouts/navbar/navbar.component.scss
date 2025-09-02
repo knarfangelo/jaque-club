@@ -63,18 +63,35 @@ background: linear-gradient(270deg,rgba(0, 77, 57, 1) 0%, rgba(34, 150, 115, 1) 
 
   button {
     margin: 0 10px;
+    height: 100%;
 
     img {
-      height: 3em;
+      height: 100%;
     }
   }
+
+  .logo {
+    margin-left: 45%;
+
+  }
+
+  /* Botón hamburguesa */
+.hamburger {
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  margin-left: auto;
+}
 }
 
 nav {
   transform: translateX(-50%);
+  top: 0;
   flex-direction: column;
   background-color: #004D39;
-  width: 90%;
+  width: 80%;
   height: 100vh;
   display: flex;
   align-items: start;
@@ -89,7 +106,7 @@ nav {
   }
 
   .logo {
-    width: 50px;
+    height: auto; 
   }
 
   .carrito {
@@ -116,13 +133,5 @@ nav.open {
   transform: translateX(0);
 }
 
-/* Botón hamburguesa */
-.hamburger {
-  font-size: 28px;
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
-  margin-left: auto;
-}
+
 }

@@ -4,11 +4,18 @@
   <img [src]="producto.imagenes[2]" alt="background" class="background">
   <section class="catalogo-jaque">
 
+
+    <!-- Swiper principal -->
     <swiper-container
-    class="producto"
+      #swiperPrincipal
+      id="swiperPrincipal"
+      class="producto"
       direction="vertical"
-      slides-per-view="1"
-      autoplay='{"delay":2000,"disableOnInteraction":false}'>
+      allow-touch-move="false"  
+      slides-per-view="1">
+      <swiper-slide  [allowTouchMove]="false" class="video360">
+  <app-video360 [folderPath]="producto.video360" [frameCount]="producto.frameCount"></app-video360>
+      </swiper-slide>
       <swiper-slide>
         <img class="principal" [src]="producto.imagenes[0]" alt="Imagen principal">
         <div class="mas">+</div>
@@ -21,6 +28,33 @@
         <img class="tercero" [src]="producto.imagenes[4]" alt="Imagen principal">
       </swiper-slide>
     </swiper-container>
+
+    <!-- Swiper gallery (thumbnails) -->
+    <swiper-container
+      class="gallery"
+      direction="vertical"
+      space-between="12"
+      navigation="true"
+      breakpoints='{
+      "0": { "direction": "horizontal" },
+      "900": { "direction": "vertical" }
+      }'
+      slides-per-view="4">
+      <swiper-slide (click)="goToSlide(0)" class="iconvideo360">
+        <img class="principal" [src]="producto.imagenes[0]" alt="Imagen principal">
+        <img src="video360.svg" alt="">
+      </swiper-slide>
+      <swiper-slide (click)="goToSlide(1)">
+        <img class="principal" [src]="producto.imagenes[0]" alt="Imagen principal">
+      </swiper-slide>
+      <swiper-slide (click)="goToSlide(2)">
+        <img class="secundario" [src]="producto.imagenes[3]" alt="Imagen principal">
+      </swiper-slide>
+      <swiper-slide (click)="goToSlide(3)">
+        <img class="tercero" [src]="producto.imagenes[4]" alt="Imagen principal">
+      </swiper-slide>
+    </swiper-container>
+      
 
     <h1>{{ producto.titulo }}</h1>
 
@@ -41,19 +75,75 @@
     </ul>
 
     <div class="pagos">
-      <button class="pedir">PEDIR Y PAGAR EN CASA</button>
+      <button (click)="abrirModal()" class="pedir">PEDIR Y PAGAR EN CASA</button>
 
-      <div class="cantidad">
-        <button>-</button>
-        <p>0</p>
-        <button>+</button>
-      </div>
+<div class="cantidad">
+  <button (click)="decrementar()">-</button>
+  <p>{{ cantidad }}</p>
+  <button (click)="incrementar()">+</button>
+</div>
 
       <button class="online">
         <img src="iconcards.webp" alt="">
         PAGAR ONLINE HOY
       </button>
     </div>
+
+
+    <!-- Modal PrimeNG -->
+<p-dialog 
+  [(visible)]="modalVisible" 
+  [modal]="true" 
+  [closable]="true" 
+  [dismissableMask]="true" 
+  appendTo="body"
+  header="Pago contra entrega"
+  [style]="{width: '100vw', maxWidth: '600px', margin: '0 1em'}"
+  [styleClass]="'custom-dialog'">
+
+  <div class="info-pago">
+    <h3>160 PEN + costo envío</h3>
+    <small><i>(Únicamente contra entrega en Lima)</i></small>
+
+    <p>Este pedido tiene un pago pendiente. Se actualizará el saldo cuando se reciba el pago de adelanto.</p>
+
+    <h4>Formas de adelantar S/.20</h4>
+
+    <ul>
+      <li>
+        ✅ <b>Interbank</b> (Víctor A. Concha)  
+        <br>- Cuenta simple soles: <code>0573478425659</code>  
+        <br>- CCI: <code>00305701347842565973</code>
+      </li>
+      <li>
+        ✅ <b>Yape/Plin</b>  
+        <br>- 961760676 (Víctor A. Concha)  
+        <br>- 978370061 (Chiwon Elleifette)
+      </li>
+    </ul>
+
+    <p>📌 Una vez realizado el pago, envíanos el voucher a nuestro <a 
+  href="https://wa.me/+51967138339" 
+  target="_blank" 
+  class="whatsapp-button"
+  aria-label="Contactar por WhatsApp">
+  WhatsApp
+</a> desde el botón en nuestra web e indícanos que deseas contraentrega para coordinar con nuestro courier.</p>
+
+    <hr>
+
+    <h4>Zonas de envío</h4>
+    <p class="zona"><b>Zona 1 (8 soles): </b>SAN ISIDRO ,MIRAFLORES, BARRANCO, SANTIAGO DE SURCO, SURQUILLO, JESÚS MARÍA, LA MOLINA, LINCE, MAGDALENA, CERCADO DE LIMA, EL AGUSTINO (NO ZONA ROJA), LA VICTORIA, PUEBLO LIBRE, RIMAC ,SAN BORJA, SAN JUAN DE LURIGANCHO ,SAN LUIS, SAN MIGUEL ,SANTA ANITA ,SALAMANCA - ATE, BREÑA.</p>
+    <p class="zona"><b>Zona 2 (10 soles): </b>ATE, BELLAVISTA, CALLAO, CARABAYLLO, CARMEN DE LA LEGUA, COMAS, CHORRILLOS, EL MARQUEZ - CALLAO, HUAYCAN, INDEPENDENCIA, LOS OLIVOS, LA PERLA, LA PUNTA,PUENTE PIEDRA, SAN JUAN DE MIRAFLORES, SAN MARTÍN DE PORRES, SANTA CLARA - ATE, VENTANILLA, VILLA EL SALVADOR, VILLA MARIA DEL TRIUNFO.</p>
+    <small>Para otros distritos consultar por <a 
+  href="https://wa.me/+51967138339" 
+  target="_blank" 
+  class="whatsapp-button"
+  aria-label="Contactar por WhatsApp">
+  WhatsApp
+</a> (no realizamos entregas en provincia)</small>
+  </div>
+</p-dialog>
 
   </section>
 </section>

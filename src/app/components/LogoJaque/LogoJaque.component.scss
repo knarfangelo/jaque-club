@@ -14,3 +14,29 @@ background-color: #fff;
     object-fit: cover;
   }
 }
+
+@media (max-width: 900px) {
+
+  .contenedor-logo {
+background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  width: 80vw;
+  height: 80vw;
+  overflow: hidden;
+
+  img {
+    width: 100vw;
+    height: 100vw;
+    object-fit: cover;
+  }
+}
+
+
+
+
+
+}

@@ -21,6 +21,39 @@
 }
 
 
+.info-pago {
+  line-height: 1.6;
+  font-size: 14px;
+
+  h3 {
+    margin-bottom: 5px;
+    color: #333;
+  }
+
+  ul {
+    margin-left: 15px;
+    li {
+      margin-bottom: 10px;
+    }
+  }
+
+  .zona {
+    font-size: 12px;
+  }
+
+  p, small {
+    a {
+      color: green;
+    }
+  }
+
+  code {
+    background: #f3f3f3;
+    padding: 2px 5px;
+    border-radius: 5px;
+  }
+}
+
 
 .catalogo-jaque {
 
@@ -31,11 +64,35 @@
   z-index: 10;
   background-color: #fff;
   font-size: 0.8vw;
-  gap: 2em;
+  gap: 1.5em;
   display: grid;
   margin-bottom: 5em;
-  grid-template-columns: 3fr 2fr 2fr 2fr;
+  grid-template-columns: 3fr 1fr 2fr 2fr 2fr;
   grid-template-rows: auto auto auto auto 1fr; /* 👈 cada fila se ajusta */
+
+  .gallery {
+    width: 100%;
+    height: 38em;
+    grid-column: 2/3;
+    grid-row: 1/6;
+
+    swiper-slide {
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+      border-radius: 1em;
+      border: 1px solid #304C3A;
+
+      .principal,.secundario,.tercero {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        box-sizing: border-box;
+        padding: 0.5em;
+      }
+
+  }
+  }
 
   .producto {
     height: 38em;
@@ -98,7 +155,7 @@
   }
 
   h1 {
-    grid-column: 2/5;
+    grid-column: 3/6;
     grid-row: 1/2;
     margin: auto 0;
     color: #304C3A;
@@ -109,14 +166,14 @@
 
   p {
     font-family: 'Times New Roman', Times, serif;
-    grid-column: 2/5;
+    grid-column: 3/6;
     grid-row: 2/3;
     font-size: 1.5em;
   }
 
   h2 {
     color: #304C3A;
-    grid-column: 2/5;
+    grid-column: 3/6;
         font-family: 'Times New Roman', Times, serif;
     grid-row: 3/4;
     margin: auto 0;
@@ -129,7 +186,7 @@
   }
 
   .caracteristicas-1 {
-    grid-column: 2/3;
+    grid-column: 3/4;
     display: flex;
     flex-direction: column;
     gap: 0.5em;
@@ -139,16 +196,6 @@
   }
 
   .caracteristicas-2 {
-    grid-column: 3/4;
-    grid-row: 4/5;
-        display: flex;
-    flex-direction: column;
-    gap: 0.5em;
-    list-style-type: disc;   /* 👈 muestra los puntos (por defecto) */
-    padding-left: 1em;  
-  }
-
-  .caracteristicas-3 {
     grid-column: 4/5;
     grid-row: 4/5;
         display: flex;
@@ -158,8 +205,18 @@
     padding-left: 1em;  
   }
 
+  .caracteristicas-3 {
+    grid-column: 5/6;
+    grid-row: 4/5;
+        display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    list-style-type: disc;   /* 👈 muestra los puntos (por defecto) */
+    padding-left: 1em;  
+  }
+
   .pagos {
-    grid-column: 3/5;
+    grid-column: 4/6;
     grid-row: 5/6;
     list-style-type: disc;   /* 👈 muestra los puntos (por defecto) */
     padding-left: 1em;  
@@ -245,85 +302,308 @@
 
 }
 
+app-video360 {
+  width: 100%;
+  height: 100%;
+}
+.video360 {
+
+  background-color:   #FDFDFF;
+}
+.iconvideo360 {
+  position: relative;
+  background-color: #FDFDFF;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+
+    &:nth-child(2) {
+      width: 80%;
+      height: 80%;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      opacity: 0.4;
+    }
+  }
+}
 
 @media (width < 900px) {
-  .catalogo-jaque {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto auto auto auto;
-    font-size: 3vw;
 
-    .producto {
-      grid-column: 1/2;
-      grid-row: 1/2;
+
+  .contenedor-jaque {
+
+  width: 100%;
+  min-height: 100vh;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-position: center;
+  position: relative;
+  
+  .background {
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+  }
+
+
+}
+
+
+
+.catalogo-jaque {
+
+  width: 90%;
+  margin-top: 5em;
+  min-height: auto;
+  padding: 3em;
+  position: relative;
+  z-index: 10;
+  background-color: #fff;
+  font-size: 1.8vw;
+  gap: 1.5em;
+  display: flex;
+  flex-direction: column;
+  .gallery {
+    width: 100%;
+    height: 20em;
+    grid-column: 2/3;
+    grid-row: 1/6;
+
+    swiper-slide {
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+      border-radius: 1em;
+      border: 1px solid #304C3A;
+
+      .principal,.secundario,.tercero {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        box-sizing: border-box;
+        padding: 0.5em;
+      }
+
+  }
+  }
+
+  .producto {
+    height: 38em;
+    grid-column: 1/2;
+    grid-row: 1/6;
+    border-radius: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #304C3A;
+    position: relative;
+
+    swiper-slide {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    img {
+      width: 30%;
+      margin: auto;
+      order: 3;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .principal {
+      width: 40%;
+      height: 35em;
+    }
+
+    .secundario {
+      width: 100%;
+      height: 35em;
+    }
+
+    .tercero {
+      width: 100%;
+      height: 35em;
+    }
+
+    .mas {
+      width: 1.5em;
+      order: 3;
+      height: 1.5em;
+      background-color: #95AC83;
+      color: #fff;
+      font-size: 3em;
+      border-radius: 50%;
+      display: flex;
+      font-weight: bold;
+      align-items: center;
+      justify-content: center;
+      box-sizing: border-box;
+      padding-bottom: 0.3em;
+    }
+    
+  }
+
+  h1 {
+    grid-column: 3/6;
+    grid-row: 1/2;
+    margin: auto 0;
+    color: #304C3A;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 4.5em;
+    text-align: center;
+  }
+
+  p {
+    font-family: 'Times New Roman', Times, serif;
+    grid-column: 3/6;
+    grid-row: 2/3;
+    font-size: 2.5em;
+  }
+
+  h2 {
+    color: #304C3A;
+    grid-column: 3/6;
+        font-family: 'Times New Roman', Times, serif;
+    grid-row: 3/4;
+    margin: auto 0;
+    font-size: 3.0em;
+  }
+
+  ul {
+    font-size: 2.1em;
+        font-family: 'Times New Roman', Times, serif;
+  }
+
+  .caracteristicas-1 {
+    grid-column: 3/4;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    grid-row: 4/5;
+    list-style-type: disc;   /* 👈 muestra los puntos (por defecto) */
+    padding-left: 1em;    
+  }
+
+  .caracteristicas-2 {
+    grid-column: 4/5;
+    grid-row: 4/5;
+        display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    list-style-type: disc;   /* 👈 muestra los puntos (por defecto) */
+    padding-left: 1em;  
+  }
+
+  .caracteristicas-3 {
+    grid-column: 5/6;
+    grid-row: 4/5;
+        display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    list-style-type: disc;   /* 👈 muestra los puntos (por defecto) */
+    padding-left: 1em;  
+  }
+
+  .pagos {
+    grid-column: 4/6;
+    grid-row: 5/6;
+    list-style-type: disc;   /* 👈 muestra los puntos (por defecto) */
+    padding-left: 1em;  
+    font-size: 1.5em;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    gap: 1em;
+
+    .pedir {
+      background-color: #CA8B00;
+      color: #fff;
+      display: flex;
+      grid-column: 1/3;
+       border-radius: 0.5em;
+      cursor: pointer;
+      padding: 1em 1.5em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .online {
+      background-color: #fff;
+      color: #fff;
+      border-radius: 0.5em;
+      background-color: #000;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5em;
+      font-weight: bold;
 
       img {
-        width: 40%;
+        width: 2.5em;
+        height: auto;
       }
 
-      .mas {
-        width: 1em;
-        height: 1em;
-        font-size: 3em;
+    }
+
+    .cantidad {
+      border: 0.1em solid #000;
+      width: fit-content;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9em;
+
+            button {
+        padding: 1em 1.5em;
+        cursor: pointer;
       }
-    }
-
-    h1 {
-      grid-column: 1/2;
-      grid-row: 2/3;
-      font-size: 8vw;
-    }
-
-    p {
-      grid-column: 1/2;
-      grid-row: 3/4;
-      font-size: 4vw;
-    }
-
-    h2 {
-      grid-column: 1/2;
-      grid-row: 4/5;
-      font-size: 5vw;
-    }
-
-    .caracteristicas-1, .caracteristicas-2, .caracteristicas-3 {
-      grid-column: 1/2;
-      grid-row: auto;
-      font-size: 3vw;
-    }
-
-    .pagos {
-      grid-column: 1/2;
-      grid-row: auto;
-      font-size: 3vw;
 
       .pedir {
-        font-size: 4vw;
+        background-color: #304C3A;
+        color: #fff;
+        border: none;
+        border-radius: 0.5em;
+        cursor: pointer;
+
+        &:hover {
+          background-color: darken(#304C3A, 10%);
+        }
       }
 
       .online {
-        font-size: 3vw;
+        background-color: #fff;
+        color: #304C3A;
+        border: 0.1em solid #304C3A;
+        border-radius: 0.5em;
+        cursor: pointer;
 
-        img {
-          width: 5vw;
-          height: auto;
+        &:hover {
+          background-color: darken(#fff, 5%);
         }
       }
 
-      .cantidad {
-        font-size: 3vw;
 
-        button {
-          padding: 1em 1.5em;
-        }
 
-        .pedir {
-          font-size: 3vw;
-        }
-
-        .online {
-          font-size: 3vw;
-        }
-      }
     }
+
   }
+
+}
+
+
 }
