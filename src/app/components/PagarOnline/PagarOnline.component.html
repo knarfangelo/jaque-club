@@ -1,0 +1,71 @@
+<button class="boton" type="button" (click)="abrirModal()">
+  <img src="iconcards.webp" alt="">PAGAR ONLINE HOY
+</button>
+
+<p-dialog header="Pago Online" [(visible)]="modalVisible" [modal]="true" [closable]="true" 
+          [dismissableMask]="true" [style]="{width:'100vw', maxWidth:'600px'}">
+  <div class="formulario-grid">
+    <h3>Datos del Comprador</h3>
+
+    <div class="fila">
+      <div class="campo">
+        <label>Nombres</label>
+        <input pInputText [(ngModel)]="billing.firstName" placeholder="Nombres"/>
+      </div>
+      <div class="campo">
+        <label>Apellidos</label>
+        <input pInputText [(ngModel)]="billing.lastName" placeholder="Apellidos"/>
+      </div>
+    </div>
+
+    <div class="fila">
+      <div class="campo">
+        <label>Correo electrónico</label>
+        <input pInputText [(ngModel)]="billing.email" placeholder="Correo electrónico"/>
+      </div>
+      <div class="campo">
+        <label>Teléfono</label>
+        <input pInputText [(ngModel)]="billing.phoneNumber" placeholder="Teléfono"/>
+      </div>
+    </div>
+
+    <div class="fila">
+      <div class="campo">
+        <label>Dirección</label>
+        <input pInputText [(ngModel)]="billing.street" placeholder="Dirección"/>
+      </div>
+    </div>
+
+    <div class="fila">
+      <div class="campo">
+        <label>Ciudad</label>
+        <input pInputText [(ngModel)]="billing.city" placeholder="Ciudad"/>
+      </div>
+      <div class="campo">
+        <label>Departamento / Estado</label>
+        <input pInputText [(ngModel)]="billing.state" placeholder="Departamento / Estado"/>
+      </div>
+    </div>
+
+    <div class="fila">
+      <div class="campo">
+        <label>Código Postal</label>
+        <input pInputText [(ngModel)]="billing.postalCode" placeholder="Código Postal"/>
+      </div>
+      <div class="campo">
+        <label>Tipo de Documento</label>
+        <input pInputText [(ngModel)]="billing.documentType" readonly placeholder="Tipo de Documento"/>
+      </div>
+    </div>
+
+    <div class="fila">
+      <div class="campo">
+        <label>Número de Documento (DNI)</label>
+        <input pInputText [(ngModel)]="billing.document" placeholder="Número de Documento"/>
+      </div>
+    </div>
+
+    <button pButton type="button" label="Continuar al Pago" 
+            (click)="generarIziConfig()" [disabled]="!formValid()"></button>
+  </div>
+</p-dialog>

@@ -1,0 +1,48 @@
+.formulario-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  .fila {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+  }
+
+  .campo {
+    display: flex;
+    flex-direction: column;
+
+    label {
+      font-weight: bold;
+      margin-bottom: 0.25rem;
+    }
+
+    input {
+      width: 100%;
+      padding: 0.5rem;
+    }
+  }
+
+  button {
+    align-self: flex-end;
+    margin-top: 1rem;
+  }
+}
+
+.boton {
+  display: flex;
+  background-color: #000;
+  color: #fff;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  cursor: pointer;
+
+  img {
+    width: 3em;
+  }
+  border-radius: 0.5em;
+}

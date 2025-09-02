@@ -8,13 +8,14 @@ import { GalleriaModule } from 'primeng/galleria';
 import { register } from 'swiper/element/bundle';
 import { DialogModule } from 'primeng/dialog';
 import { Video360Component } from '../../components/video360/video360.component';
+import { PagarOnlineComponent } from "../../components/PagarOnline/PagarOnline.component";
 
 register();
 
 @Component({
   selector: 'app-detalles-jaques',
   standalone: true,
-  imports: [CommonModule, FooterComponent, NavbarComponent, GalleriaModule, DialogModule,Video360Component],
+  imports: [CommonModule, FooterComponent, NavbarComponent, GalleriaModule, DialogModule, Video360Component, PagarOnlineComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './detalles-jaques.component.html',
   styleUrls: ['./detalles-jaques.component.scss'],
@@ -25,6 +26,16 @@ export class DetallesJaquesComponent implements AfterViewInit {
   images: any[] = [];
 
   @ViewChild('swiperPrincipal', { static: false }) swiperPrincipal!: ElementRef;
+
+  modalVisible: boolean = false;       // Modal principal
+  modalZonasVisible: boolean = false;  // Modal zonas
+
+  modalPagoOnlineVisible: boolean = false;
+
+  abrirModalPagoOnline() {
+    this.modalPagoOnlineVisible = true;
+  }
+  cantidad: number = 1;
 
   constructor(
     private route: ActivatedRoute,
@@ -39,35 +50,28 @@ export class DetallesJaquesComponent implements AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    // Asegurar que swiper esté listo
-    this.swiperPrincipal.nativeElement.swiper.update();
+    if (this.swiperPrincipal?.nativeElement?.swiper) {
+      this.swiperPrincipal.nativeElement.swiper.update();
+    }
   }
 
   goToSlide(index: number) {
     this.swiperPrincipal.nativeElement.swiper.slideTo(index);
   }
 
-  modalVisible: boolean = false;
-
-
-  cantidad: number = 1; // inicializa en 1
-
-incrementar() {
-  if (this.cantidad < 100) {
-    this.cantidad++;
+  incrementar() {
+    if (this.cantidad < 100) this.cantidad++;
   }
-}
 
-decrementar() {
-  if (this.cantidad > 1) {
-    this.cantidad--;
+  decrementar() {
+    if (this.cantidad > 1) this.cantidad--;
   }
-}
 
-abrirModal() {
-  this.modalVisible = true;
-}
+  abrirModal() {
+    this.modalVisible = true;
+  }
 
-
-
+  abrirModalZonas() {
+    this.modalZonasVisible = true;
+  }
 }

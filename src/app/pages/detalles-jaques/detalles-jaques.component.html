@@ -4,7 +4,6 @@
   <img [src]="producto.imagenes[2]" alt="background" class="background">
   <section class="catalogo-jaque">
 
-
     <!-- Swiper principal -->
     <swiper-container
       #swiperPrincipal
@@ -13,8 +12,8 @@
       direction="vertical"
       allow-touch-move="false"  
       slides-per-view="1">
-      <swiper-slide  [allowTouchMove]="false" class="video360">
-  <app-video360 [folderPath]="producto.video360" [frameCount]="producto.frameCount"></app-video360>
+      <swiper-slide [allowTouchMove]="false" class="video360">
+        <app-video360 [folderPath]="producto.video360" [frameCount]="producto.frameCount"></app-video360>
       </swiper-slide>
       <swiper-slide>
         <img class="principal" [src]="producto.imagenes[0]" alt="Imagen principal">
@@ -54,22 +53,17 @@
         <img class="tercero" [src]="producto.imagenes[4]" alt="Imagen principal">
       </swiper-slide>
     </swiper-container>
-      
 
     <h1>{{ producto.titulo }}</h1>
-
     <p>{{ producto.descripcion }}</p>
 
     <h2>Características:</h2>
-
     <ul class="caracteristicas-1">
       <li *ngFor="let item of producto.caracteristicas.caracteristicas1">{{ item }}</li>
     </ul>
-
     <ul class="caracteristicas-2">
       <li *ngFor="let item of producto.caracteristicas.caracteristicas2">{{ item }}</li>
     </ul>
-
     <ul class="caracteristicas-3">
       <li *ngFor="let item of producto.caracteristicas.caracteristicas3">{{ item }}</li>
     </ul>
@@ -77,73 +71,87 @@
     <div class="pagos">
       <button (click)="abrirModal()" class="pedir">PEDIR Y PAGAR EN CASA</button>
 
-<div class="cantidad">
-  <button (click)="decrementar()">-</button>
-  <p>{{ cantidad }}</p>
-  <button (click)="incrementar()">+</button>
-</div>
+      <div class="cantidad">
+        <button (click)="decrementar()">-</button>
+        <p>{{ cantidad }}</p>
+        <button (click)="incrementar()">+</button>
+      </div>
 
-      <button class="online">
-        <img src="iconcards.webp" alt="">
-        PAGAR ONLINE HOY
-      </button>
+      <app-pagar-online></app-pagar-online>
     </div>
 
+    <!-- Modal Principal -->
+    <p-dialog 
+      [(visible)]="modalVisible" 
+      [modal]="true" 
+      [closable]="true" 
+      [dismissableMask]="true" 
+      appendTo="body"
+      header="Pago contra entrega"
+      [style]="{width: '100vw', maxWidth: '600px', margin: '0 1em'}"
+      [styleClass]="'custom-dialog'">
 
-    <!-- Modal PrimeNG -->
-<p-dialog 
-  [(visible)]="modalVisible" 
-  [modal]="true" 
-  [closable]="true" 
-  [dismissableMask]="true" 
-  appendTo="body"
-  header="Pago contra entrega"
-  [style]="{width: '100vw', maxWidth: '600px', margin: '0 1em'}"
-  [styleClass]="'custom-dialog'">
+      <div class="info-pago">
+        <h3>160 PEN + costo envío 
+          <button class="info" (click)="abrirModalZonas()">
+            <img src="info.svg" alt="">
+          </button>
+        </h3>
+        <small><i>(Únicamente contra entrega en Lima)</i></small>
 
-  <div class="info-pago">
-    <h3>160 PEN + costo envío</h3>
-    <small><i>(Únicamente contra entrega en Lima)</i></small>
+        <p>Este pedido tiene un pago pendiente. Se actualizará el saldo cuando se reciba el pago de adelanto.</p>
 
-    <p>Este pedido tiene un pago pendiente. Se actualizará el saldo cuando se reciba el pago de adelanto.</p>
+        <h4>Formas de adelantar S/.20</h4>
+        <ul>
+          <li>
+            ✅ <b>Interbank</b> (Víctor A. Concha)  
+            <br>- Cuenta simple soles: <code>0573478425659</code>  
+            <br>- CCI: <code>00305701347842565973</code>
+          </li>
+          <li>
+            ✅ <b>Yape/Plin</b>  
+            <br>- 961760676 (Víctor A. Concha)  
+            <br>- 978370061 (Chiwon Elleifette)
+          </li>
+        </ul>
 
-    <h4>Formas de adelantar S/.20</h4>
+        <p>📌 Una vez realizado el pago, envíanos el voucher a nuestro <a 
+          href="https://wa.me/+51967138339" 
+          target="_blank" 
+          class="whatsapp-button"
+          aria-label="Contactar por WhatsApp">
+          WhatsApp
+        </a> desde el botón en nuestra web e indícanos que deseas contraentrega para coordinar con nuestro courier.</p>
+      </div>
+    </p-dialog>
 
-    <ul>
-      <li>
-        ✅ <b>Interbank</b> (Víctor A. Concha)  
-        <br>- Cuenta simple soles: <code>0573478425659</code>  
-        <br>- CCI: <code>00305701347842565973</code>
-      </li>
-      <li>
-        ✅ <b>Yape/Plin</b>  
-        <br>- 961760676 (Víctor A. Concha)  
-        <br>- 978370061 (Chiwon Elleifette)
-      </li>
-    </ul>
+    <!-- Modal Zonas -->
+    <p-dialog 
+      [(visible)]="modalZonasVisible" 
+      [modal]="true" 
+      [closable]="true" 
+      [dismissableMask]="true" 
+      appendTo="body"
+      header="Zonas de envío"
+      [style]="{width: '100vw', maxWidth: '600px', margin: '0 1em'}"
+      [styleClass]="'custom-dialog'">
 
-    <p>📌 Una vez realizado el pago, envíanos el voucher a nuestro <a 
-  href="https://wa.me/+51967138339" 
-  target="_blank" 
-  class="whatsapp-button"
-  aria-label="Contactar por WhatsApp">
-  WhatsApp
-</a> desde el botón en nuestra web e indícanos que deseas contraentrega para coordinar con nuestro courier.</p>
+      <div class="info-zonas">
+        <h4>Zona 1 (8 soles)</h4>
+        <p>SAN ISIDRO, MIRAFLORES, BARRANCO, SANTIAGO DE SURCO, SURQUILLO, JESÚS MARÍA, LA MOLINA, LINCE, MAGDALENA, CERCADO DE LIMA, EL AGUSTINO (NO ZONA ROJA), LA VICTORIA, PUEBLO LIBRE, RIMAC, SAN BORJA, SAN JUAN DE LURIGANCHO, SAN LUIS, SAN MIGUEL, SANTA ANITA, SALAMANCA - ATE, BREÑA.</p>
 
-    <hr>
+        <h4>Zona 2 (10 soles)</h4>
+        <p>ATE, BELLAVISTA, CALLAO, CARABAYLLO, CARMEN DE LA LEGUA, COMAS, CHORRILLOS, EL MARQUEZ - CALLAO, HUAYCAN, INDEPENDENCIA, LOS OLIVOS, LA PERLA, LA PUNTA, PUENTE PIEDRA, SAN JUAN DE MIRAFLORES, SAN MARTÍN DE PORRES, SANTA CLARA - ATE, VENTANILLA, VILLA EL SALVADOR, VILLA MARIA DEL TRIUNFO.</p>
 
-    <h4>Zonas de envío</h4>
-    <p class="zona"><b>Zona 1 (8 soles): </b>SAN ISIDRO ,MIRAFLORES, BARRANCO, SANTIAGO DE SURCO, SURQUILLO, JESÚS MARÍA, LA MOLINA, LINCE, MAGDALENA, CERCADO DE LIMA, EL AGUSTINO (NO ZONA ROJA), LA VICTORIA, PUEBLO LIBRE, RIMAC ,SAN BORJA, SAN JUAN DE LURIGANCHO ,SAN LUIS, SAN MIGUEL ,SANTA ANITA ,SALAMANCA - ATE, BREÑA.</p>
-    <p class="zona"><b>Zona 2 (10 soles): </b>ATE, BELLAVISTA, CALLAO, CARABAYLLO, CARMEN DE LA LEGUA, COMAS, CHORRILLOS, EL MARQUEZ - CALLAO, HUAYCAN, INDEPENDENCIA, LOS OLIVOS, LA PERLA, LA PUNTA,PUENTE PIEDRA, SAN JUAN DE MIRAFLORES, SAN MARTÍN DE PORRES, SANTA CLARA - ATE, VENTANILLA, VILLA EL SALVADOR, VILLA MARIA DEL TRIUNFO.</p>
-    <small>Para otros distritos consultar por <a 
-  href="https://wa.me/+51967138339" 
-  target="_blank" 
-  class="whatsapp-button"
-  aria-label="Contactar por WhatsApp">
-  WhatsApp
-</a> (no realizamos entregas en provincia)</small>
-  </div>
-</p-dialog>
+        <small>Para otros distritos consultar por <a 
+          href="https://wa.me/+51967138339" 
+          target="_blank" 
+          class="whatsapp-button"
+          aria-label="Contactar por WhatsApp">
+          WhatsApp
+        </a>.</small>
+      </div>
+    </p-dialog>
 
   </section>
 </section>
