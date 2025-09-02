@@ -36,24 +36,25 @@ export class Video360Component implements AfterViewInit {
     this.lastX = this.getClientX(event);
   }
 
-  rotate(event: MouseEvent | TouchEvent) {
-    event.preventDefault();
-    event.stopPropagation();
-    if (!this.isRotating) return;
+rotate(event: MouseEvent | TouchEvent) {
+  event.preventDefault();
+  event.stopPropagation();
+  if (!this.isRotating) return;
 
-    const clientX = this.getClientX(event);
-    const dx = clientX - this.lastX;
-    const sensitivity = 5;
+  const clientX = this.getClientX(event);
+  const dx = clientX - this.lastX;
+  const sensitivity = 5;
 
-    if (Math.abs(dx) >= sensitivity) {
-      if (dx > 0) {
-        this.currentFrame = (this.currentFrame + 1) % this.totalFrames;
-      } else {
-        this.currentFrame = (this.currentFrame - 1 + this.totalFrames) % this.totalFrames;
-      }
-      this.lastX = clientX;
+  if (Math.abs(dx) >= sensitivity) {
+    if (dx > 0) {
+      this.currentFrame = (this.currentFrame - 1 + this.totalFrames) % this.totalFrames;
+    } else {
+      this.currentFrame = (this.currentFrame + 1) % this.totalFrames;
     }
+    this.lastX = clientX;
   }
+}
+
 
   stopRotate() {
     this.isRotating = false;
