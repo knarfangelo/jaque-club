@@ -78,7 +78,6 @@ background: linear-gradient(270deg,rgba(0, 77, 57, 1) 0%, rgba(34, 150, 115, 1) 
       display: flex;
       align-items: center;
       justify-content: center;
-      background-color: rebeccapurple;
       position: sticky;
       top: 0;
       left: 0;
@@ -130,6 +129,36 @@ background: linear-gradient(270deg,rgba(0, 77, 57, 1) 0%, rgba(34, 150, 115, 1) 
     }
   }
 
+  .donaciones {
+    background-color: red;
+    display: flex;
+    flex-direction: column  ;
+    position: relative ;
+
+    img{
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+
+    }
+
+    .overlay {
+      position: absolute;
+      z-index: 10;
+      font-size: 0.8vw;
+      right: 0;
+      margin: 10em;
+      color: white;
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.5);
+
+      p{
+        font-size: 2.5em;
+        font-family: 'MirrenBcb-Regular';
+        color: yellow;
+      }
+    }
+  }
 
   .logo-wrapper {
     opacity: 0;         // empieza invisible

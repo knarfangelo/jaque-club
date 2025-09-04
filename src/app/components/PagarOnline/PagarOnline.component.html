@@ -2,70 +2,90 @@
   <img src="iconcards.webp" alt="">PAGAR ONLINE HOY
 </button>
 
-<p-dialog header="Pago Online" [(visible)]="modalVisible" [modal]="true" [closable]="true" 
+<p-dialog header="Pago Online" [(visible)]="modalVisible" [modal]="true" [closable]="true"
           [dismissableMask]="true" [style]="{width:'100vw', maxWidth:'600px'}">
+
   <div class="formulario-grid">
-    <h3>Datos del Comprador</h3>
 
-    <div class="fila">
-      <div class="campo">
-        <label>Nombres</label>
-        <input pInputText [(ngModel)]="billing.firstName" placeholder="Nombres"/>
+    <label>¿Para qué distrito es la compra?</label>
+    <div class="zona-radio">
+
+      <div class="zona-option">
+        <p-radioButton name="zona" [(ngModel)]="zonaSeleccionada" [value]="zona1" (onClick)="calcularTotal()"></p-radioButton>
+        <label>{{ zona1.label }} (S/{{ zona1.precioEnvio }})</label>
+        <button class="p-button-text" (click)="abrirInfoZona(zona1)">ℹ️</button>
       </div>
-      <div class="campo">
-        <label>Apellidos</label>
-        <input pInputText [(ngModel)]="billing.lastName" placeholder="Apellidos"/>
+
+      <div class="zona-option">
+        <p-radioButton name="zona" [(ngModel)]="zonaSeleccionada" [value]="zona2" (onClick)="calcularTotal()"></p-radioButton>
+        <label>{{ zona2.label }} (S/{{ zona2.precioEnvio }})</label>
+        <button class="p-button-text" (click)="abrirInfoZona(zona2)">ℹ️</button>
       </div>
+
+      <div class="zona-option">
+        <p-radioButton name="zona" [(ngModel)]="zonaSeleccionada" [value]="zona3" (onClick)="calcularTotal()"></p-radioButton>
+        <label>{{ zona3.label }}</label>
+        <button class="p-button-text" (click)="abrirInfoZona(zona3)">ℹ️</button>
+      </div>
+
     </div>
 
-    <div class="fila">
-      <div class="campo">
-        <label>Correo electrónico</label>
-        <input pInputText [(ngModel)]="billing.email" placeholder="Correo electrónico"/>
-      </div>
-      <div class="campo">
-        <label>Teléfono</label>
-        <input pInputText [(ngModel)]="billing.phoneNumber" placeholder="Teléfono"/>
-      </div>
-    </div>
+    <div *ngIf="mostrarTotal" class="total">TOTAL = {{ total }} PEN</div>
+    <div *ngIf="!mostrarTotal" class="total">Algún otro distrito O PROVINCIA (BAJO SHALOM) consultar con nuestro asesor por  <a 
+          href="https://wa.me/+51967138339" 
+          target="_blank" 
+          class="whatsapp-button"
+          aria-label="Contactar por WhatsApp">
+          WhatsApp
+        </a> </div>
 
-    <div class="fila">
-      <div class="campo">
-        <label>Dirección</label>
-        <input pInputText [(ngModel)]="billing.street" placeholder="Dirección"/>
-      </div>
-    </div>
+    <button type="button" pButton label="PROCEDER A PAGAR" (click)="abrirPagoDialog()"></button>
 
-    <div class="fila">
-      <div class="campo">
-        <label>Ciudad</label>
-        <input pInputText [(ngModel)]="billing.city" placeholder="Ciudad"/>
-      </div>
-      <div class="campo">
-        <label>Departamento / Estado</label>
-        <input pInputText [(ngModel)]="billing.state" placeholder="Departamento / Estado"/>
-      </div>
-    </div>
-
-    <div class="fila">
-      <div class="campo">
-        <label>Código Postal</label>
-        <input pInputText [(ngModel)]="billing.postalCode" placeholder="Código Postal"/>
-      </div>
-      <div class="campo">
-        <label>Tipo de Documento</label>
-        <input pInputText [(ngModel)]="billing.documentType" readonly placeholder="Tipo de Documento"/>
-      </div>
-    </div>
-
-    <div class="fila">
-      <div class="campo">
-        <label>Número de Documento (DNI)</label>
-        <input pInputText [(ngModel)]="billing.document" placeholder="Número de Documento"/>
-      </div>
-    </div>
-
-    <button pButton type="button" label="Continuar al Pago" 
-            (click)="generarIziConfig()" [disabled]="!formValid()"></button>
   </div>
+</p-dialog>
+
+<p-dialog header="Información de la Zona" [(visible)]="infoZonaVisible" [modal]="true" [closable]="true"
+          [style]="{width:'90vw', maxWidth:'500px'}">
+  <div *ngIf="zonaInfo">
+    <p>{{ zonaInfo.distritos.join(', ') }}.</p>
+  </div>
+</p-dialog>
+
+
+
+<p-dialog header="Método de Pago" [(visible)]="pagoDialogVisible" [modal]="true" [closable]="true"
+          [style]="{width:'90vw', maxWidth:'600px'}" class="dialog-pago">
+
+  <div class="dialog-pago-section">
+    <h3>- PAGO CON YAPE / PLIN / TRANSFERENCIA</h3>
+    <div class="dialog-pago-content">
+      <p><strong>YAPE/PLIN</strong></p>
+      <p>961760676 (Victor A. Concha)</p>
+      <p>978370061 (Chiwon Elelifetet)</p>
+
+      <p><strong>INTERBANK</strong></p>
+      <p>Cuenta Simple Soles: <span class="info-cuenta">0573478425659</span> (Victor A. Concha)</p>
+      <p>CCI: <span class="info-cuenta"> 00305701347842565973</span> (Victor A. Concha)</p>
+
+      <p class="dialog-pago-aviso">🚨Una vez realizado el pago, envíanos el voucher a nuestro  <a 
+          href="https://wa.me/+51967138339" 
+          target="_blank" 
+          class="whatsapp-button"
+          aria-label="Contactar por WhatsApp">
+          WhatsApp
+        </a> desde el botón de nuestra web e indícanos tus datos para coordinar con nuestro courier🚨.</p>
+    </div>
+  </div>
+
+  <div class="dialog-pago-section">
+    <h3>- PAGAR MEDIANTE LINK DE PAGO</h3>
+    <p>Contacta a nuestro asesor vía  <a 
+          href="https://wa.me/+51967138339" 
+          target="_blank" 
+          class="whatsapp-button"
+          aria-label="Contactar por WhatsApp">
+          WhatsApp
+        </a> para que te envíe tu link de pago personalizado.</p>
+  </div>
+
 </p-dialog>

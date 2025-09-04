@@ -1,80 +1,83 @@
-import { Component } from '@angular/core';
+import { Component, Input, SimpleChanges } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { DialogModule } from 'primeng/dialog';
 import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
+import { SelectModule } from 'primeng/select';
+import { RadioButtonModule } from 'primeng/radiobutton';
+
 
 @Component({
   selector: 'app-pagar-online',
-  imports: [CommonModule, FormsModule, DialogModule, InputTextModule, ButtonModule],
+  imports: [CommonModule, FormsModule, DialogModule, InputTextModule, ButtonModule, RadioButtonModule],
   templateUrl: './PagarOnline.component.html',
   styleUrl: './PagarOnline.component.scss',
 })
 export class PagarOnlineComponent {
+  modalVisible = false;
+  infoZonaVisible = false;
+  pagoDialogVisible = false;
+  zonaInfo: any = null; // Zona temporal para mostrar en el dialog
 
 
-  modalVisible: boolean = false;
+  @Input() precioProducto: number = 160; // Precio recibido desde otro componente
+  total: number = this.precioProducto;   // Total inicial (producto + envío)
+  mostrarTotal: boolean = true;          // Para ocultar total si es zona 3
 
-  // Formulario
-  billing: any = {
-    firstName: '',
-    lastName: '',
-    email: '',
-    phoneNumber: '',
-    street: '',
-    city: '',
-    state: '',
-    country: 'PE',
-    postalCode: '',
-    documentType: 'DNI',
-    document: ''
+  zona1 = {
+    label: 'Zona 1',
+    precioEnvio: 8,
+    distritos: ['SAN ISIDRO','MIRAFLORES','BARRANCO','SANTIAGO DE SURCO','SURQUILLO','JESÚS MARÍA','LA MOLINA','LINCE','MAGDALENA','CERCADO DE LIMA','EL AGUSTINO (NO ZONA ROJA)','LA VICTORIA','PUEBLO LIBRE','RIMAC','SAN BORJA','SAN JUAN DE LURIGANCHO','SAN LUIS','SAN MIGUEL','SANTA ANITA','SALAMANCA','ATE','BREÑA']
   };
 
-  // Validación simple
-  formValid(): boolean {
-    const b = this.billing;
-    return b.firstName && b.lastName && b.email && b.phoneNumber &&
-           b.street && b.city && b.state && b.country &&
-           b.postalCode && b.documentType && b.document ? true : false;
+  zona2 = {
+    label: 'Zona 2',
+    precioEnvio: 10,
+    distritos: ['ATE','BELLAVISTA','CALLAO','CARABAYLLO','CARMEN DE LA LEGUA','COMAS','CHORRILLOS','EL MARQUEZ - CALLAO','HUAYCAN','INDEPENDENCIA','LOS OLIVOS','LA PERLA','LA PUNTA','PUENTE PIEDRA','SAN JUAN DE MIRAFLORES','SAN MARTÍN DE PORRES','SANTA CLARA - ATE','VENTANILLA','VILLA EL SALVADOR','VILLA MARIA DEL TRIUNFO']
+  };
+
+  zona3 = {
+    label: 'Otro / Provincia',
+    precioEnvio: 0, // el precio será acordado
+    distritos: ['Algún otro distrito O PROVINCIA (BAJO SHALOM) consultar con nuestro asesor por Whatsapp ']
+  };
+
+  zonaSeleccionada = this.zona1;
+
+  ngOnChanges(changes: SimpleChanges) {
+    if (changes['precioProducto']) {
+      this.calcularTotal();
+    }
   }
 
   abrirModal() {
     this.modalVisible = true;
+    this.calcularTotal();
   }
 
-  cerrarModal() {
-    this.modalVisible = false;
+
+abrirInfoZona(zona: any) {
+  this.zonaInfo = zona;     // Guardamos la zona que queremos mostrar
+  this.infoZonaVisible = true; // Abrimos el diálogo
+}
+
+  abrirPagoDialog() {
+    this.calcularTotal();
+    this.pagoDialogVisible = true;
   }
 
-  // Preparar objeto iziConfig para enviar a Izipay
-  generarIziConfig() {
-    if (!this.formValid()) {
-      alert('Complete todos los campos obligatorios.');
-      return;
+  seleccionarZona(zona: any) {
+    this.zonaSeleccionada = zona;
+    this.calcularTotal();
+  }
+
+  calcularTotal() {
+    if (this.zonaSeleccionada === this.zona3) {
+      this.mostrarTotal = false;
+    } else {
+      this.mostrarTotal = true;
+      this.total = this.precioProducto + (this.zonaSeleccionada.precioEnvio || 0);
     }
-
-    const iziConfig = {
-      config: {
-        transactionId: 'GENERAR_UNICO_ID',
-        action: 'pay',
-        merchantCode: '{MERCHANT_CODE}',
-        order: {
-          orderNumber: 'GENERAR_ORDER_NUMBER',
-          currency: 'PEN',
-          amount: 0, // Asignar monto real
-          processType: 'AT',
-          merchantBuyerId: '{MERCHANT_CODE}',
-          dateTimeTransaction: new Date().toISOString()
-        },
-        billing: { ...this.billing },
-        shipping: { ...this.billing } // si el comprador recibe, shipping = billing
-      }
-    };
-
-    console.log('Objeto iziConfig listo para Izipay:', iziConfig);
-    // Aquí llamas al SDK de Izipay
   }
-
-
 }

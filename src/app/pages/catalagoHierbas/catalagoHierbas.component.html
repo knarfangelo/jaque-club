@@ -1,37 +1,41 @@
-    <app-navbar></app-navbar>
+<app-navbar></app-navbar>
 
-    <section class="catalogo-hierbas">
-    <div class="background">
-        <img src="yerbas/fondoyerbas.webp" alt="">
-        <img src="yerbas/filtroverdoso.webp" alt="">
+<section class="catalogo-hierbas">
+  <div class="background">
+    <img src="yerbas/fondoyerbas.webp" alt="">
+    <img src="yerbas/filtroverdoso.webp" alt="">
+  </div>
+  <div class="productos">
+
+    <div routerLink="/catalogo-hierbas/detalle/1" class="producto playadito">
+      <h1>Playadito, Yerba Mate con Palo</h1>
+      <img src="yerbas/playadito.webp" alt="">
+      <p class="peso">500gr / 1kg</p>
+      <button class="precio">S/. 40 - S/. 60</button>
     </div>
-    <div class="productos">
 
-        <div routerLink="/catalogo-hierbas/detalle/1" class="producto playadito">
-        <h1>Playadito, Yerba Mate con Palo</h1>
-        <img src="yerbas/playadito.webp" alt="">
-        <p class="peso">500gr / 1kg</p>
-        <button class="precio">s/.40 - s/.60</button>
-        </div>
-        <div  routerLink="/catalogo-hierbas/detalle/2" class="producto playadito">
-        <h1>Canarias Serena</h1>
-        <img src="yerbas/canarias-te-serena.webp" alt="">
-        <p class="peso">500gr / 1kg</p>
-        <button class="precio">s/.35 - s/.55</button>
-        </div>
-        <div routerLink="/catalogo-hierbas/detalle/3" class="producto playadito">
-        <h1>Canarias Te Rojo y Centella</h1>
-        <img src="yerbas/canarias-te-rojo.webp" alt="">
-        <p class="peso">500gr / 1kg</p>
-        <button  class="precio">s/.38 - s/.60</button>
-        </div>
-        <div routerLink="/catalogo-hierbas/detalle/4" class="producto playadito">
-        <h1>Canarias Te Verde y Jengibre</h1>
-        <img src="yerbas/canarias-te-verde.webp" alt="">
-        <p class="peso">500gr / 1kg</p>
-        <button  class="precio">s/.38 - s/.60</button>
-        </div>
+    <div routerLink="/catalogo-hierbas/detalle/2" class="producto playadito">
+      <h1>Canarias Serena</h1>
+      <img src="yerbas/canarias-te-serena.webp" alt="">
+      <p class="peso">500gr / 1kg</p>
+      <button class="precio">S/. 35 - S/. 55</button>
     </div>
-    </section>
 
-    <app-footer></app-footer>
+    <div routerLink="/catalogo-hierbas/detalle/3" class="producto playadito">
+      <h1>Canarias Té Rojo y Centella</h1>
+      <img src="yerbas/canarias-te-rojo.webp" alt="">
+      <p class="peso">500gr / 1kg</p>
+      <button class="precio">S/. 38 - S/. 60</button>
+    </div>
+
+    <div routerLink="/catalogo-hierbas/detalle/4" class="producto playadito">
+      <h1>Canarias Té Verde y Jengibre</h1>
+      <img src="yerbas/canarias-te-verde.webp" alt="">
+      <p class="peso">500gr / 1kg</p>
+      <button class="precio">S/. 38 - S/. 60</button>
+    </div>
+
+  </div>
+</section>
+
+<app-footer></app-footer>

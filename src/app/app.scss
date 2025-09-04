@@ -1,0 +1,47 @@
+/* app.component.scss */
+.loading-overlay {
+  position: fixed;
+  top: 0; 
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #304C3A; /* verde sólido */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5px;
+  z-index: 9999;
+}
+
+.spinner {
+  position: relative;
+  width: 25em;
+  height: 25em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* el anillo giratorio */
+.spinner-ring {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 1.5em solid #ffffff; /* borde blanco */
+  border-top: 1.5em solid #cce5cc; /* borde superior más claro */
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* el logo fijo */
+.spinner img {
+  width: 70%;   /* ajusta tamaño del logo */
+  height: 70%;
+  z-index: 1;
+}
+
+/* animación de giro continuo */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
