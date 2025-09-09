@@ -83,6 +83,10 @@ padding: 5px;
  outline: 3px solid #fff;
 }
 
+swiper-container {
+  touch-action: pan-y; /* evita que el swipe horizontal sea interpretado como “atrás/adelante” */
+  overscroll-behavior-x: contain; /* Safari no hace “gesto de retroceso” */
+}
 
 @media (width < 900px) {
 

@@ -27,6 +27,11 @@
         <label>{{ zona3.label }}</label>
         <button class="p-button-text" (click)="abrirInfoZona(zona3)">ℹ️</button>
       </div>
+      <div class="zona-option">
+        <p-radioButton name="zona" [(ngModel)]="zonaSeleccionada" [value]="zona4" (onClick)="calcularTotal()"></p-radioButton>
+        <label>{{ zona4.label }}</label>
+        <button class="p-button-text" (click)="abrirInfoZona(zona4)">ℹ️</button>
+      </div>
 
     </div>
 

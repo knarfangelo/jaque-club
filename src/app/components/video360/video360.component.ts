@@ -12,6 +12,7 @@ export class Video360Component implements AfterViewInit {
 
   @Input() folderPath: string = '/videos360/';
   @Input() frameCount: number = 67;
+  @Input() fileExtension: string = 'jpg';
 
   frames: string[] = [];
   currentFrame = 0;
@@ -24,7 +25,7 @@ export class Video360Component implements AfterViewInit {
     this.frames = [];
     for (let i = 1; i <= this.frameCount; i++) {
       const num = i.toString().padStart(6, '0');
-      this.frames.push(`${this.folderPath}frame_${num}.jpg`);
+      this.frames.push(`${this.folderPath}frame_${num}.${this.fileExtension}`);
     }
     this.totalFrames = this.frames.length;
   }

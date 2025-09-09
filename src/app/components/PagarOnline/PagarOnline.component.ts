@@ -42,6 +42,11 @@ export class PagarOnlineComponent {
     precioEnvio: 0, // el precio será acordado
     distritos: ['Algún otro distrito O PROVINCIA (BAJO SHALOM) consultar con nuestro asesor por Whatsapp ']
   };
+  zona4 = {
+    label: 'Recojo en tienda (Gratis)',
+    precioEnvio: 0, // el precio será acordado
+    distritos: ['Av conquistadores 941 san Isidro']
+  };
 
   zonaSeleccionada = this.zona1;
 

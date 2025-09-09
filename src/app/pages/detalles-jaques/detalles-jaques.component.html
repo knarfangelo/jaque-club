@@ -13,15 +13,18 @@
       allow-touch-move="false"  
       slides-per-view="1">
       <swiper-slide [allowTouchMove]="false" class="video360">
-        <app-video360 [folderPath]="producto.video360" [frameCount]="producto.frameCount"></app-video360>
+        <app-video360 [folderPath]="producto.video360" [frameCount]="producto.frameCount" [fileExtension]="producto.fileExtension"></app-video360>
+      </swiper-slide>
+      <swiper-slide>
+        <img class="secundario" [src]="producto.imagenes[3]" alt="Imagen principal">
+      </swiper-slide>
+      <swiper-slide>
+        <img class="tercero" [src]="producto.imagenes[5]" alt="Imagen principal">
       </swiper-slide>
       <swiper-slide>
         <img class="principal" [src]="producto.imagenes[0]" alt="Imagen principal">
         <div class="mas">+</div>
         <img [src]="producto.imagenes[1]" alt="Imagen secundaria">
-      </swiper-slide>
-      <swiper-slide>
-        <img class="secundario" [src]="producto.imagenes[3]" alt="Imagen principal">
       </swiper-slide>
       <swiper-slide>
         <img class="tercero" [src]="producto.imagenes[4]" alt="Imagen principal">
@@ -33,23 +36,26 @@
       class="gallery"
       direction="vertical"
       space-between="12"
-      navigation="true"
+      navigation="false"
       breakpoints='{
       "0": { "direction": "horizontal" },
       "900": { "direction": "vertical" }
       }'
-      slides-per-view="4">
+      slides-per-view="5">
       <swiper-slide (click)="goToSlide(0)" class="iconvideo360">
         <img class="principal" [src]="producto.imagenes[0]" alt="Imagen principal">
         <img src="video360.svg" alt="">
       </swiper-slide>
       <swiper-slide (click)="goToSlide(1)">
-        <img class="principal" [src]="producto.imagenes[0]" alt="Imagen principal">
+        <img class="principal" [src]="producto.imagenes[3]" alt="Imagen principal">
       </swiper-slide>
       <swiper-slide (click)="goToSlide(2)">
-        <img class="secundario" [src]="producto.imagenes[3]" alt="Imagen principal">
+        <img class="secundario" [src]="producto.imagenes[5]" alt="Imagen principal">
       </swiper-slide>
       <swiper-slide (click)="goToSlide(3)">
+        <img class="tercero" [src]="producto.imagenes[0]" alt="Imagen principal">
+      </swiper-slide>
+      <swiper-slide (click)="goToSlide(4)">
         <img class="tercero" [src]="producto.imagenes[4]" alt="Imagen principal">
       </swiper-slide>
     </swiper-container>
@@ -142,6 +148,8 @@
 
         <h4>Zona 2 (10 soles)</h4>
         <p>ATE, BELLAVISTA, CALLAO, CARABAYLLO, CARMEN DE LA LEGUA, COMAS, CHORRILLOS, EL MARQUEZ - CALLAO, HUAYCAN, INDEPENDENCIA, LOS OLIVOS, LA PERLA, LA PUNTA, PUENTE PIEDRA, SAN JUAN DE MIRAFLORES, SAN MARTÍN DE PORRES, SANTA CLARA - ATE, VENTANILLA, VILLA EL SALVADOR, VILLA MARIA DEL TRIUNFO.</p>
+        <h4>Recojo en tienda (Gratis)</h4>
+        <p>Av conquistadores 941 san Isidro</p>
 
         <small>Para otros distritos consultar por <a 
           href="https://wa.me/+51967138339" 

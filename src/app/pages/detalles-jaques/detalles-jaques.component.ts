@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, CUSTOM_ELEMENTS_SCHEMA, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 import { FooterComponent } from "../../layouts/footer/footer.component";
 import { NavbarComponent } from "../../layouts/navbar/navbar.component";
 import { ActivatedRoute } from '@angular/router';
